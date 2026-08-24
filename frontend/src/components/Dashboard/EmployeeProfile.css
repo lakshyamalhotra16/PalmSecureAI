@@ -1,0 +1,125 @@
+.employee-profile{
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:var(--card);
+
+    box-shadow:var(--shadow);
+
+}
+
+.profile-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.profile-avatar{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:white;
+
+}
+
+.profile-header h2{
+
+    font-size:26px;
+
+}
+
+.profile-header p{
+
+    color:var(--text-light);
+
+    margin-top:6px;
+
+}
+
+.profile-divider{
+
+    height:1px;
+
+    background:var(--border);
+
+    margin:25px 0;
+
+}
+
+.profile-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:18px;
+
+}
+
+.profile-row span{
+
+    flex:1;
+
+    color:var(--text-light);
+
+}
+
+.profile-row strong{
+
+    color:var(--text);
+
+}
+
+.status{
+
+    color:var(--success);
+
+}
+
+.verified-box{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:#effdf5;
+
+    color:var(--success);
+
+}
+
+.verified-box h4{
+
+    margin-bottom:4px;
+
+}

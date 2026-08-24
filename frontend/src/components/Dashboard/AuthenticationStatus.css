@@ -1,0 +1,87 @@
+.authentication-card{
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:var(--card);
+
+}
+
+.authentication-header{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+
+}
+
+.authentication-header svg{
+
+    color:var(--primary);
+
+}
+
+.authentication-header p{
+
+    color:var(--text-light);
+
+    margin-top:5px;
+
+}
+
+.authentication-divider{
+
+    height:1px;
+
+    background:var(--border);
+
+    margin:25px 0;
+
+}
+
+.authentication-step{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:18px;
+
+}
+
+.authentication-step span{
+
+    flex:1;
+
+    margin-left:15px;
+
+}
+
+.success{
+
+    color:var(--success);
+
+}
+
+.metric-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:18px;
+
+    font-size:17px;
+
+}
+
+.metric-row strong{
+
+    color:var(--primary);
+
+}

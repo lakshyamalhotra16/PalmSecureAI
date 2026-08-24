@@ -1,0 +1,55 @@
+.footer{
+
+    margin-top:100px;
+
+    border-top:1px solid var(--border);
+
+    padding:35px 0;
+
+    background:rgba(255,255,255,.02);
+
+    backdrop-filter:blur(12px);
+
+}
+
+.footer-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.footer h2{
+
+    font-size:24px;
+
+}
+
+.footer p{
+
+    margin-top:8px;
+
+}
+
+.footer span{
+
+    color:var(--text-secondary);
+
+}
+
+@media(max-width:768px){
+
+    .footer-content{
+
+        flex-direction:column;
+
+        gap:25px;
+
+        text-align:center;
+
+    }
+
+}

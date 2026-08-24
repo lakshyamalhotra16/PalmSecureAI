@@ -1,0 +1,73 @@
+@import url("./variables.css");
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:
+
+        Inter,
+
+        "Segoe UI",
+
+        sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+button{
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+input{
+
+    font-family:inherit;
+
+}
+
+.container{
+
+    width:min(1300px,92%);
+
+    margin:auto;
+
+}
+
+.card{
+
+    background:var(--card);
+
+    border-radius:var(--radius-md);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    box-shadow:var(--shadow-hover);
+
+}

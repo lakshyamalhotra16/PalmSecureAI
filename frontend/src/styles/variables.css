@@ -1,0 +1,84 @@
+:root{
+
+    --primary:#4f7cff;
+    --primary-dark:#3768f5;
+    --primary-light:#7fa2ff;
+
+    --secondary:#7b61ff;
+    --secondary-dark:#6547ff;
+
+    --success:#22c55e;
+    --danger:#ef4444;
+    --warning:#f59e0b;
+    --info:#06b6d4;
+
+
+    --background:#eef2f7;
+    --surface:#ffffff;
+    --card:#ffffff;
+    --card-hover:#f8fafc;
+
+    --border:#d9e2ec;
+
+    --text:#111827;
+    --text-secondary:#6b7280;
+    --text-muted:#94a3b8;
+
+    --sidebar-width:280px;
+    --sidebar-collapsed:90px;
+
+
+    --topbar-height:76px;
+
+
+    --radius-xs:8px;
+    --radius-sm:12px;
+    --radius-md:18px;
+    --radius-lg:24px;
+    --radius-xl:32px;
+
+
+    --shadow-sm:
+        0 4px 10px rgba(0,0,0,.06);
+
+    --shadow:
+        0 12px 30px rgba(0,0,0,.10);
+
+    --shadow-lg:
+        0 18px 45px rgba(0,0,0,.15);
+
+    --shadow-hover:
+        0 18px 40px rgba(79,124,255,.22);
+
+
+    --glass-bg:
+        rgba(255,255,255,.08);
+
+    --glass-border:
+        rgba(255,255,255,.12);
+
+    --glass-blur:18px;
+
+    --transition-fast:.2s ease;
+
+    --transition:.3s ease;
+
+    --transition-slow:.45s ease;
+
+    --space-xs:6px;
+    --space-sm:10px;
+    --space-md:16px;
+    --space-lg:24px;
+    --space-xl:36px;
+    --space-2xl:48px;
+
+
+    --container-width:1400px;
+
+
+    --z-navbar:1000;
+    --z-sidebar:1100;
+    --z-dropdown:1200;
+    --z-modal:1500;
+
+}

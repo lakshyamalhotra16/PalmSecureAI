@@ -1,0 +1,803 @@
+/* =========================================================
+   PALMSECUREAI — DASHBOARD
+   Premium Enterprise Control Center
+========================================================= */
+
+.dashboard-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 42px 0 70px;
+    color: #f8fafc;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 78% 0%,
+            rgba(59, 130, 246, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 85%,
+            rgba(16, 185, 129, 0.045),
+            transparent 28%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND EFFECTS
+========================================================= */
+
+.dashboard-page::before {
+    content: "";
+    position: fixed;
+    top: 80px;
+    right: 2%;
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.035);
+    filter: blur(110px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.dashboard-page::after {
+    content: "";
+    position: fixed;
+    bottom: 5%;
+    left: 12%;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.025);
+    filter: blur(110px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* =========================================================
+   MAIN SHELL
+========================================================= */
+
+.dashboard-shell {
+    position: relative;
+    z-index: 1;
+
+    width: min(1500px, calc(100% - 64px));
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADER
+========================================================= */
+
+.dashboard-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.dashboard-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    color: #34d399;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.eyebrow-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+}
+
+.dashboard-heading h1 {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+}
+
+.dashboard-heading p {
+    max-width: 720px;
+
+    margin: 15px 0 0;
+
+    color: #8ea0b8;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LIVE STATUS
+========================================================= */
+
+.dashboard-live-status {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    min-width: 215px;
+
+    padding: 12px 16px;
+
+    border: 1px solid rgba(34, 197, 94, 0.18);
+    border-radius: 13px;
+
+    background: rgba(16, 185, 129, 0.055);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 10px;
+
+    background: rgba(34, 197, 94, 0.10);
+    color: #4ade80;
+}
+
+.dashboard-live-status strong {
+    display: block;
+
+    color: #dfffea;
+
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.dashboard-live-status small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #668174;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.dashboard-section {
+    width: 100%;
+}
+
+.dashboard-hero-section {
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   COMMON DASHBOARD PANEL
+========================================================= */
+
+.dashboard-panel {
+    position: relative;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(71, 103, 145, 0.16);
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14, 28, 47, 0.97),
+            rgba(7, 18, 31, 0.99)
+        );
+
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.dashboard-panel:hover {
+    border-color: rgba(96, 165, 250, 0.18);
+
+    box-shadow:
+        0 22px 55px rgba(0, 0, 0, 0.23),
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+
+/* =========================================================
+   MAIN DASHBOARD GRID
+========================================================= */
+
+.dashboard-main-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 22px;
+
+    width: 100%;
+}
+
+.dashboard-auth-panel {
+    min-height: 100%;
+}
+
+
+/* =========================================================
+   ANALYTICS GRID
+========================================================= */
+
+.dashboard-analytics-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.65fr)
+        minmax(320px, 0.85fr);
+
+    gap: 22px;
+
+    width: 100%;
+}
+
+.dashboard-chart-panel,
+.dashboard-activity-panel {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   ATTENDANCE TABLE
+========================================================= */
+
+.dashboard-table-panel {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.dashboard-actions-panel {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   LOADING STATE
+========================================================= */
+
+.dashboard-state {
+    min-height: 520px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px;
+
+    border: 1px solid rgba(71, 103, 145, 0.16);
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14, 28, 47, 0.97),
+            rgba(7, 18, 31, 0.99)
+        );
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.20);
+}
+
+.dashboard-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    background: rgba(37, 99, 235, 0.10);
+}
+
+.dashboard-loader div {
+    width: 24px;
+    height: 24px;
+
+    border: 2px solid rgba(96, 165, 250, 0.18);
+    border-top-color: #60a5fa;
+
+    border-radius: 50%;
+
+    animation: dashboard-spin 0.8s linear infinite;
+}
+
+.dashboard-state h2 {
+    margin: 0 0 8px;
+
+    color: #f8fafc;
+
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.dashboard-state p {
+    margin: 0;
+
+    color: #71839c;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ERROR STATE
+========================================================= */
+
+.dashboard-error-state {
+    max-width: 650px;
+    margin: 60px auto;
+
+    border-color: rgba(239, 68, 68, 0.18);
+}
+
+.dashboard-state-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+
+    margin-bottom: 18px;
+
+    border-radius: 15px;
+
+    background: rgba(239, 68, 68, 0.10);
+    color: #f87171;
+}
+
+.dashboard-error-state p {
+    max-width: 520px;
+
+    line-height: 1.6;
+}
+
+.dashboard-retry {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 22px;
+
+    padding: 10px 17px;
+
+    border: 1px solid rgba(96, 165, 250, 0.22);
+    border-radius: 10px;
+
+    background: rgba(37, 99, 235, 0.10);
+
+    color: #93c5fd;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.dashboard-retry:hover {
+    background: rgba(37, 99, 235, 0.17);
+    border-color: rgba(96, 165, 250, 0.38);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.dashboard-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 17px 20px;
+
+    border-top: 1px solid rgba(71, 103, 145, 0.10);
+
+    color: #52657e;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.footer-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #6f8790;
+}
+
+.footer-status span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.65);
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes dashboard-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1500px) {
+
+    .dashboard-shell {
+        gap: 30px;
+    }
+
+    .dashboard-main-grid,
+    .dashboard-analytics-grid {
+        gap: 26px;
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .dashboard-shell {
+        width: min(1400px, calc(100% - 48px));
+    }
+
+    .dashboard-analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-page {
+        padding: 32px 0 55px;
+    }
+
+    .dashboard-shell {
+        width: calc(100% - 34px);
+        gap: 22px;
+    }
+
+    .dashboard-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .dashboard-live-status {
+        width: fit-content;
+    }
+
+    .dashboard-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .dashboard-shell {
+        width: calc(100% - 26px);
+        gap: 18px;
+    }
+
+    .dashboard-heading h1 {
+        font-size: 2.25rem;
+    }
+
+    .dashboard-heading p {
+        font-size: 13px;
+    }
+
+    .dashboard-live-status {
+        width: 100%;
+    }
+
+    .dashboard-panel {
+        border-radius: 17px;
+    }
+
+    .dashboard-state {
+        min-height: 400px;
+        padding: 30px 20px;
+    }
+
+    .dashboard-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px 5px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .dashboard-page {
+        padding-top: 25px;
+    }
+
+    .dashboard-shell {
+        width: calc(100% - 20px);
+        gap: 15px;
+    }
+
+    .dashboard-heading h1 {
+        font-size: 2rem;
+    }
+
+}
+
+
+/* =========================================================
+   PALMSECUREAI — FINAL DASHBOARD POLISH
+   Safe final overrides; existing components/API untouched.
+========================================================= */
+
+.dashboard-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.dashboard-refresh-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 0 14px;
+    border: 1px solid rgba(96, 165, 250, 0.18);
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(20, 38, 62, 0.92), rgba(10, 23, 39, 0.96));
+    color: #cbd5e1;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.035), 0 8px 24px rgba(0,0,0,0.14);
+    transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.dashboard-refresh-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    border-color: rgba(96,165,250,.38);
+    background: linear-gradient(145deg, rgba(24,48,78,.98), rgba(10,27,46,.98));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 12px 30px rgba(0,0,0,.20);
+}
+
+.dashboard-refresh-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.dashboard-refresh-button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.dashboard-refresh-spinning {
+    animation: dashboard-spin .8s linear infinite;
+}
+
+.dashboard-live-status {
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-live-status::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,.035) 50%, transparent 75%);
+    transform: translateX(-120%);
+    animation: dashboard-status-sheen 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.live-indicator {
+    position: relative;
+}
+
+.live-indicator::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    right: 4px;
+    top: 4px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 10px rgba(74,222,128,.85);
+    animation: dashboard-live-pulse 2s ease-in-out infinite;
+}
+
+.dashboard-panel {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.dashboard-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(148,163,184,.10), transparent);
+    pointer-events: none;
+}
+
+.dashboard-section,
+.dashboard-main-grid,
+.dashboard-analytics-grid,
+.dashboard-table-panel,
+.dashboard-actions-panel {
+    animation: dashboard-section-in .55s ease both;
+}
+
+.dashboard-main-grid { animation-delay: .06s; }
+.dashboard-analytics-grid { animation-delay: .12s; }
+.dashboard-table-panel { animation-delay: .18s; }
+.dashboard-actions-panel { animation-delay: .24s; }
+.dashboard-footer { animation: dashboard-section-in .55s ease .30s both; }
+
+@keyframes dashboard-section-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dashboard-live-pulse {
+    0%, 100% { opacity: .65; transform: scale(.9); }
+    50% { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes dashboard-status-sheen {
+    0%, 55%, 100% { transform: translateX(-120%); }
+    70% { transform: translateX(120%); }
+}
+
+.dashboard-refresh-button:focus-visible,
+.dashboard-retry:focus-visible {
+    outline: 2px solid rgba(96,165,250,.7);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dashboard-section,
+    .dashboard-main-grid,
+    .dashboard-analytics-grid,
+    .dashboard-table-panel,
+    .dashboard-actions-panel,
+    .dashboard-footer {
+        animation: none !important;
+    }
+
+    .dashboard-live-status::before,
+    .live-indicator::after,
+    .dashboard-refresh-spinning {
+        animation: none !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .dashboard-header-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .dashboard-live-status {
+        flex: 1;
+        min-width: 220px;
+    }
+}
+
+@media (max-width: 650px) {
+    .dashboard-header-actions {
+        width: 100%;
+        align-items: stretch;
+        flex-direction: column-reverse;
+    }
+
+    .dashboard-refresh-button,
+    .dashboard-live-status {
+        width: 100%;
+    }
+
+    .dashboard-refresh-button {
+        min-height: 44px;
+    }
+}

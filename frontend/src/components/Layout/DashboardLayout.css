@@ -1,0 +1,1049 @@
+/* =========================================================
+   PALMSECUREAI
+   PREMIUM APPLICATION LAYOUT
+   ========================================================= */
+
+.dashboard-layout {
+    --layout-bg: #070b14;
+    --layout-surface: #0b1220;
+    --layout-border: rgba(148, 163, 184, 0.10);
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 75% -10%,
+            rgba(79, 124, 255, 0.10),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 100% 65%,
+            rgba(34, 197, 94, 0.035),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #060a12 0%,
+            #080e18 48%,
+            #060b13 100%
+        );
+
+    color: #f8fafc;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND AMBIENT LIGHT
+   ========================================================= */
+
+.dashboard-layout::before {
+    content: "";
+
+    position: fixed;
+
+    width: 520px;
+    height: 520px;
+
+    top: -280px;
+    right: 8%;
+
+    border-radius: 50%;
+
+    background: rgba(79, 124, 255, 0.055);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   MAIN APPLICATION AREA
+   ========================================================= */
+
+.dashboard-main {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 100vh;
+
+    margin-left: 260px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(7, 11, 20, 0.96) 0%,
+            rgba(7, 11, 20, 0.985) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   SUBTLE GRID / TECHNICAL TEXTURE
+   ========================================================= */
+
+.dashboard-main::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.45),
+        transparent 65%
+    );
+
+    opacity: 0.25;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   CONTENT AREA
+   ========================================================= */
+
+.dashboard-content {
+    flex: 1;
+
+    width: 100%;
+
+    padding:
+        30px
+        34px
+        64px;
+
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   CONTENT CONTAINER
+   ========================================================= */
+
+.dashboard-content-inner {
+    width: 100%;
+
+    max-width: 1480px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   COMPONENT WIDTH CONSISTENCY
+   ========================================================= */
+
+.dashboard-content-inner > * {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    animation:
+        dashboard-section-enter
+        0.45s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+/* =========================================================
+   STAGGERED SECTION ANIMATION
+   ========================================================= */
+
+.dashboard-content-inner > *:nth-child(1) {
+    animation-delay: 0.02s;
+}
+
+.dashboard-content-inner > *:nth-child(2) {
+    animation-delay: 0.06s;
+}
+
+.dashboard-content-inner > *:nth-child(3) {
+    animation-delay: 0.10s;
+}
+
+.dashboard-content-inner > *:nth-child(4) {
+    animation-delay: 0.14s;
+}
+
+.dashboard-content-inner > *:nth-child(5) {
+    animation-delay: 0.18s;
+}
+
+.dashboard-content-inner > *:nth-child(6) {
+    animation-delay: 0.22s;
+}
+
+.dashboard-content-inner > *:nth-child(7) {
+    animation-delay: 0.26s;
+}
+
+
+/* =========================================================
+   PAGE ENTER ANIMATION
+   ========================================================= */
+
+@keyframes dashboard-section-enter {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(14px)
+            scale(0.995);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL BEHAVIOUR
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: #070b14;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   PREMIUM SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #070b14;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1b2638;
+
+    border-radius: 999px;
+
+    border: 2px solid #070b14;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2c3d59;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1600px) {
+
+    .dashboard-main {
+        margin-left: 270px;
+    }
+
+    .dashboard-content {
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+
+    .dashboard-content-inner {
+        max-width: 1540px;
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (max-width: 1400px) {
+
+    .dashboard-content {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .dashboard-main {
+        margin-left: 88px;
+    }
+
+    .dashboard-content {
+        padding:
+            28px
+            24px
+            52px;
+    }
+
+    .dashboard-content-inner {
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-main {
+        margin-left: 0;
+    }
+
+    .dashboard-content {
+        padding:
+            24px
+            20px
+            46px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .dashboard-content {
+        padding:
+            20px
+            16px
+            38px;
+    }
+
+    .dashboard-content-inner {
+        gap: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .dashboard-content {
+        padding:
+            18px
+            13px
+            32px;
+    }
+
+    .dashboard-content-inner {
+        gap: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .dashboard-content-inner > * {
+        animation: none;
+    }
+
+}
+
+/* =========================================================
+   DASHBOARD TYPOGRAPHY & SPACING OVERRIDE
+   ========================================================= */
+
+.dashboard-content {
+    padding: 36px 40px 56px;
+}
+
+.dashboard-content-inner {
+    width: 100%;
+    max-width: 1540px;
+}
+
+/* Prevent dashboard sections from becoming visually compressed */
+
+.dashboard-content-inner > * {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Better default text rendering */
+
+.dashboard-layout,
+.dashboard-layout * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1201px) {
+    .dashboard-content {
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+    .dashboard-content {
+        padding: 32px 30px 48px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        padding: 25px 18px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-content {
+        padding: 20px 14px 32px;
+    }
+}
+
+/* =========================================================
+   PALMSECUREAI — PREMIUM DASHBOARD TYPOGRAPHY SYSTEM
+   Global readability + professional enterprise sizing
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   GLOBAL DASHBOARD BASE
+   --------------------------------------------------------- */
+
+.dashboard-layout,
+.dashboard-main,
+.dashboard-content {
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN PAGE HEADINGS
+   --------------------------------------------------------- */
+
+.dashboard-content h1 {
+    font-size: 30px !important;
+    line-height: 1.15 !important;
+    font-weight: 750 !important;
+    letter-spacing: -0.7px !important;
+}
+
+.dashboard-content h2 {
+    font-size: 21px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.35px !important;
+}
+
+.dashboard-content h3 {
+    font-size: 17px !important;
+    line-height: 1.3 !important;
+    font-weight: 650 !important;
+}
+
+.dashboard-content p {
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+}
+
+
+/* ---------------------------------------------------------
+   HERO SECTION
+   --------------------------------------------------------- */
+
+.hero-section {
+    font-size: 14px;
+}
+
+.hero-status span,
+.hero-status > span:last-child {
+    font-size: 9px !important;
+    letter-spacing: 1.1px !important;
+}
+
+.hero-description {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    max-width: 650px;
+}
+
+.hero-meta-item small {
+    font-size: 8px !important;
+    letter-spacing: 0.9px !important;
+    font-weight: 700 !important;
+}
+
+.hero-meta-item strong {
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+}
+
+.security-status span {
+    font-size: 8px !important;
+    letter-spacing: 1px !important;
+    font-weight: 700 !important;
+}
+
+.security-status strong {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+.security-status small {
+    font-size: 9px !important;
+}
+
+
+/* ---------------------------------------------------------
+   HERO STAT CARDS
+   --------------------------------------------------------- */
+
+.hero-stat-label {
+    font-size: 8px !important;
+    letter-spacing: 0.9px !important;
+    font-weight: 700 !important;
+}
+
+.hero-stat-card > strong {
+    display: block;
+    margin-top: 7px;
+
+    font-size: 25px !important;
+    line-height: 1.1 !important;
+    font-weight: 750 !important;
+    letter-spacing: -0.5px !important;
+}
+
+.hero-stat-card > span:not(.hero-stat-label) {
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+}
+
+.hero-stat-arrow {
+    opacity: 0.8;
+}
+
+
+/* ---------------------------------------------------------
+   SYSTEM OVERVIEW
+   --------------------------------------------------------- */
+
+.system-overview {
+    font-size: 14px;
+}
+
+.system-heading span {
+    font-size: 8px !important;
+    letter-spacing: 1px !important;
+    font-weight: 750 !important;
+}
+
+.system-heading h2 {
+    font-size: 20px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+}
+
+.system-live-badge {
+    font-size: 10px !important;
+    font-weight: 650 !important;
+}
+
+.service-label {
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+}
+
+.service-content strong {
+    font-size: 24px !important;
+    line-height: 1.1 !important;
+    font-weight: 750 !important;
+}
+
+.service-status {
+    font-size: 9px !important;
+}
+
+.service-footer {
+    font-size: 9px !important;
+}
+
+.system-footer-item span {
+    font-size: 8px !important;
+    letter-spacing: 0.8px !important;
+}
+
+.system-footer-item strong {
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+}
+
+
+/* ---------------------------------------------------------
+   EMPLOYEE PROFILE / EMPLOYEE CARD
+   --------------------------------------------------------- */
+
+.employee-profile,
+.employee-card {
+    font-size: 13px;
+}
+
+.employee-profile h2,
+.employee-card h2 {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+    font-weight: 700 !important;
+}
+
+.employee-profile h3,
+.employee-card h3 {
+    font-size: 15px !important;
+    font-weight: 650 !important;
+}
+
+.employee-profile p,
+.employee-card p {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+}
+
+.employee-profile small,
+.employee-card small {
+    font-size: 9px !important;
+}
+
+.employee-profile strong,
+.employee-card strong {
+    font-size: 12px !important;
+}
+
+
+/* ---------------------------------------------------------
+   AI AUTHENTICATION
+   --------------------------------------------------------- */
+
+.ai-authentication,
+.authentication-status,
+.ai-status-card {
+    font-size: 13px;
+}
+
+.ai-authentication h2,
+.authentication-status h2,
+.ai-status-card h2 {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+    font-weight: 700 !important;
+}
+
+.ai-authentication h3,
+.authentication-status h3,
+.ai-status-card h3 {
+    font-size: 14px !important;
+    font-weight: 650 !important;
+}
+
+.ai-authentication p,
+.authentication-status p,
+.ai-status-card p {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+}
+
+
+/* ---------------------------------------------------------
+   ATTENDANCE ANALYTICS
+   --------------------------------------------------------- */
+
+.attendance-analytics {
+    font-size: 13px;
+}
+
+.attendance-analytics h2 {
+    font-size: 20px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+}
+
+.attendance-analytics p {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+}
+
+.attendance-analytics small {
+    font-size: 9px !important;
+}
+
+.attendance-analytics strong {
+    font-size: 16px !important;
+}
+
+
+/* ---------------------------------------------------------
+   RECENT ACTIVITY
+   --------------------------------------------------------- */
+
+.recent-activity {
+    font-size: 13px;
+}
+
+.recent-activity h2 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+}
+
+.recent-activity h3 {
+    font-size: 14px !important;
+    font-weight: 650 !important;
+}
+
+.recent-activity p {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+}
+
+.recent-activity small {
+    font-size: 9px !important;
+}
+
+.recent-activity span {
+    font-size: 10px;
+}
+
+
+/* ---------------------------------------------------------
+   ATTENDANCE HISTORY / TABLE
+   --------------------------------------------------------- */
+
+.attendance-table,
+.attendance-history {
+    font-size: 13px;
+}
+
+.attendance-table h2,
+.attendance-history h2 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+}
+
+.attendance-table th,
+.attendance-history th {
+    font-size: 9px !important;
+    letter-spacing: 0.7px !important;
+    font-weight: 750 !important;
+    white-space: nowrap;
+}
+
+.attendance-table td,
+.attendance-history td {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+}
+
+.attendance-table .employee-name,
+.attendance-history .employee-name {
+    font-size: 12px !important;
+    font-weight: 650 !important;
+}
+
+.attendance-table .employee-id,
+.attendance-history .employee-id {
+    font-size: 10px !important;
+    font-weight: 550 !important;
+}
+
+
+/* ---------------------------------------------------------
+   IMPORTANT — TIME / LOGIN TIME
+   --------------------------------------------------------- */
+
+.attendance-table .login-time,
+.attendance-history .login-time,
+.login-time,
+.time-value,
+.attendance-time {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    font-weight: 650 !important;
+    letter-spacing: 0 !important;
+    white-space: nowrap !important;
+}
+
+
+/* If the time is inside a generic table cell */
+.attendance-table td:nth-child(4),
+.attendance-history td:nth-child(4) {
+    font-size: 12px !important;
+    font-weight: 650 !important;
+    white-space: nowrap !important;
+}
+
+
+/* ---------------------------------------------------------
+   STATUS BADGES
+   --------------------------------------------------------- */
+
+.status-present,
+.status-badge,
+.status-success,
+.status-active {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 22px;
+    padding: 3px 9px;
+
+    font-size: 9px !important;
+    line-height: 1 !important;
+    font-weight: 650 !important;
+
+    letter-spacing: 0.1px;
+}
+
+
+/* ---------------------------------------------------------
+   QUICK ACTIONS
+   --------------------------------------------------------- */
+
+.quick-actions {
+    font-size: 13px;
+}
+
+.quick-actions h2 {
+    font-size: 20px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+}
+
+.quick-actions p {
+    font-size: 11px !important;
+}
+
+.quick-actions h3 {
+    font-size: 13px !important;
+    font-weight: 650 !important;
+}
+
+.quick-actions span {
+    font-size: 10px;
+}
+
+
+/* ---------------------------------------------------------
+   COMMON LABELS
+   --------------------------------------------------------- */
+
+.dashboard-content label {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+}
+
+.dashboard-content small {
+    font-size: 9px !important;
+}
+
+.dashboard-content strong {
+    font-weight: 650;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER / SYSTEM INFORMATION
+   --------------------------------------------------------- */
+
+.dashboard-content footer,
+.dashboard-footer {
+    font-size: 10px !important;
+}
+
+
+/* ---------------------------------------------------------
+   BETTER SPACING AFTER FONT INCREASE
+   --------------------------------------------------------- */
+
+.hero-description {
+    margin-top: 10px;
+}
+
+.hero-meta {
+    margin-top: 18px;
+}
+
+.system-overview-header {
+    margin-bottom: 20px;
+}
+
+.service-content {
+    margin-top: 15px;
+}
+
+.service-footer {
+    margin-top: 15px;
+    padding-top: 11px;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE TYPOGRAPHY
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+    .dashboard-content h1 {
+        font-size: 27px !important;
+    }
+
+    .dashboard-content h2 {
+        font-size: 19px !important;
+    }
+
+    .hero-stat-card > strong {
+        font-size: 23px !important;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .dashboard-content {
+        font-size: 13px;
+    }
+
+    .dashboard-content h1 {
+        font-size: 24px !important;
+    }
+
+    .dashboard-content h2 {
+        font-size: 18px !important;
+    }
+
+    .hero-description {
+        font-size: 12px !important;
+    }
+
+    .hero-stat-card > strong {
+        font-size: 22px !important;
+    }
+
+    .service-content strong {
+        font-size: 22px !important;
+    }
+
+    .attendance-table td,
+    .attendance-history td {
+        font-size: 10px !important;
+    }
+
+    .attendance-table td:nth-child(4),
+    .attendance-history td:nth-child(4),
+    .login-time,
+    .time-value,
+    .attendance-time {
+        font-size: 11px !important;
+    }
+}

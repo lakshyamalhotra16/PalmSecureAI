@@ -1,0 +1,224 @@
+.enrollment-hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:45px;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+        135deg,
+        #18254d,
+        #111827
+    );
+
+    border:1px solid rgba(255,255,255,.06);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.enrollment-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    background:#4f46e5;
+
+    filter:blur(180px);
+
+    opacity:.15;
+
+    right:-120px;
+
+    top:-120px;
+
+}
+
+.enrollment-left{
+
+    flex:1;
+
+    z-index:2;
+
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(79,70,229,.15);
+
+    color:#7c9cff;
+
+    border:1px solid rgba(79,70,229,.35);
+
+    margin-bottom:24px;
+
+}
+
+.enrollment-left h1{
+
+    color:white;
+
+    font-size:52px;
+
+    line-height:1.1;
+
+    font-weight:700;
+
+}
+
+.enrollment-left h1 span{
+
+    display:block;
+
+    margin-top:12px;
+
+    color:#6f8dff;
+
+}
+
+.enrollment-left p{
+
+    margin-top:28px;
+
+    color:#94a3b8;
+
+    max-width:620px;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+.enrollment-right{
+
+    width:360px;
+
+}
+
+.status-card{
+
+    padding:30px;
+
+    border-radius:22px;
+
+    background:#182132;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.45);
+
+}
+
+.status-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#22c55e;
+
+    font-weight:600;
+
+    margin-bottom:28px;
+
+}
+
+.status-circle{
+
+    width:200px;
+
+    height:200px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #355cff,
+        #4f46e5
+    );
+
+    box-shadow:
+    0 0 70px rgba(79,70,229,.35);
+
+}
+
+.status-info{
+
+    margin-top:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.status-info div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#212b40;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+}
+
+.status-info span{
+
+    color:#94a3b8;
+
+}
+
+.status-info strong{
+
+    color:white;
+
+}

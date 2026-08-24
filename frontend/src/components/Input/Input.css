@@ -1,0 +1,214 @@
+@import url("../../styles/variables.css");
+
+.input-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    width:100%;
+
+}
+
+
+.input-label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    color:var(--text-primary);
+
+}
+
+.required{
+
+    color:var(--danger);
+
+}
+
+.input-container{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.input-field{
+
+    width:100%;
+
+    height:56px;
+
+    padding:0 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    background:var(--surface);
+
+    color:var(--text-primary);
+
+    font-size:1rem;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background-color .25s ease;
+
+}
+
+.input-field::placeholder{
+
+    color:var(--text-light);
+
+}
+
+.input-field:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:
+        0 0 0 4px rgba(109,94,252,.12);
+
+}
+
+
+.has-left-icon{
+
+    padding-left:52px;
+
+}
+= */
+
+.has-right-icon{
+
+    padding-right:52px;
+
+}
+
+
+.input-icon{
+
+    position:absolute;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--text-secondary);
+
+    font-size:18px;
+
+    pointer-events:none;
+
+}
+
+.input-icon.left{
+
+    left:18px;
+
+}
+
+.input-icon.right{
+
+    right:18px;
+
+}
+
+.input-field:disabled{
+
+    background:#F8FAFC;
+
+    color:var(--text-light);
+
+    cursor:not-allowed;
+
+}
+
+.input-error{
+
+    border-color:var(--danger);
+
+}
+
+.input-error:focus{
+
+    border-color:var(--danger);
+
+    box-shadow:
+        0 0 0 4px rgba(239,68,68,.15);
+
+}
+
+.input-success{
+
+    border-color:var(--success);
+
+}
+
+.input-success:focus{
+
+    border-color:var(--success);
+
+    box-shadow:
+        0 0 0 4px rgba(34,197,94,.15);
+
+}
+== */
+
+.helper-text{
+
+    font-size:.85rem;
+
+    color:var(--text-secondary);
+
+}
+
+
+.error-text{
+
+    font-size:.85rem;
+
+    color:var(--danger);
+
+    font-weight:500;
+
+}
+
+.success-text{
+
+    font-size:.85rem;
+
+    color:var(--success);
+
+    font-weight:500;
+
+}
+
+
+@media(max-width:768px){
+
+    .input-field{
+
+        height:52px;
+
+        font-size:.95rem;
+
+    }
+
+}

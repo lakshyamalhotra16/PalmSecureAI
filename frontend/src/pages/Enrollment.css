@@ -1,0 +1,853 @@
+/* =========================================================
+   PALMSECUREAI — ENROLLMENT PAGE
+   Professional UI — Authentication Page Style
+========================================================= */
+
+.enrollment-page {
+    min-height: calc(100vh - 72px);
+    width: 100%;
+    padding: 42px 40px 60px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 82% 8%,
+            rgba(37, 99, 235, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 35%,
+            rgba(59, 130, 246, 0.045),
+            transparent 28%
+        ),
+        #020b16;
+
+    color: #f8fafc;
+}
+
+.enrollment-page *,
+.enrollment-page *::before,
+.enrollment-page *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.enrollment-header {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto 30px;
+}
+
+.header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 13px;
+
+    border-radius: 9px;
+
+    background: rgba(34, 197, 94, 0.07);
+    border: 1px solid rgba(34, 197, 94, 0.16);
+
+    color: #4ade80;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.enrollment-header h1 {
+    margin: 15px 0 8px;
+
+    font-size: clamp(38px, 4vw, 56px);
+    line-height: 1.05;
+
+    font-weight: 800;
+    letter-spacing: -0.04em;
+
+    color: #f8fafc;
+}
+
+.enrollment-header h1 span {
+    color: #668cff;
+}
+
+.enrollment-header p {
+    margin: 0;
+
+    max-width: 760px;
+
+    color: #8fa1b8;
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.enrollment-card {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    padding: 22px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10, 24, 40, 0.98),
+            rgba(6, 18, 31, 0.98)
+        );
+
+    border: 1px solid rgba(100, 145, 190, 0.12);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.employee-details-section {
+    width: 100%;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.section-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(37, 99, 235, 0.25),
+            rgba(79, 70, 229, 0.16)
+        );
+
+    border: 1px solid rgba(59, 130, 246, 0.18);
+
+    color: #60a5fa;
+}
+
+.section-heading h2 {
+    margin: 0 0 3px;
+
+    color: #f1f5f9;
+
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: #71849b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   EMPLOYEE FORM
+========================================================= */
+
+.employee-details-section {
+    padding: 20px;
+
+    border-radius: 15px;
+
+    background: rgba(8, 22, 37, 0.72);
+
+    border: 1px solid rgba(100, 145, 190, 0.10);
+}
+
+.employee-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-top: 20px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #cbd5e1;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.form-group label span {
+    margin-left: 6px;
+
+    color: #64748b;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.input-wrapper {
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 14px;
+
+    border-radius: 10px;
+
+    background: #0b1a2d;
+
+    border: 1px solid rgba(100, 145, 190, 0.14);
+
+    color: #64748b;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.input-wrapper:focus-within {
+    border-color: rgba(59, 130, 246, 0.65);
+
+    background: #0d2036;
+
+    box-shadow:
+        0 0 0 3px rgba(59, 130, 246, 0.09);
+}
+
+.input-wrapper svg {
+    flex-shrink: 0;
+
+    color: #64748b;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #e2e8f0;
+
+    font-size: 13px;
+}
+
+.input-wrapper input::placeholder {
+    color: #60738c;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+}
+
+
+/* =========================================================
+   BIOMETRIC SECTION
+========================================================= */
+
+.biometric-section {
+    margin-top: 26px;
+}
+
+.biometric-section > .section-heading {
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   THREE COLUMN AREA
+   Matches Authentication UI
+========================================================= */
+
+.enrollment-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(0, 1.25fr)
+        minmax(280px, 0.8fr);
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   BIOMETRIC PANELS
+========================================================= */
+
+.enrollment-panel {
+    min-width: 0;
+
+    padding: 18px;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 26, 43, 0.98),
+            rgba(11, 21, 35, 0.98)
+        );
+
+    border: 1px solid rgba(100, 145, 190, 0.10);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+.panel-heading h2 {
+    margin: 0 0 3px;
+
+    color: #f8fafc;
+
+    font-size: 19px;
+    font-weight: 750;
+}
+
+.panel-heading span {
+    color: #8294aa;
+
+    font-size: 12px;
+}
+
+.ai-heading {
+    margin-bottom: 15px;
+}
+
+.online-status {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #22c55e !important;
+
+    font-size: 12px !important;
+    font-weight: 700;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 10px rgba(34, 197, 94, 0.65);
+}
+
+
+/* =========================================================
+   CAMERA / PALM PREVIEW
+========================================================= */
+
+.camera-preview,
+.palm-preview {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1.45 / 1;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: #17263b;
+
+    border: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.camera-preview video,
+.camera-preview img,
+.palm-preview img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.camera-preview video {
+    transform: scaleX(-1);
+}
+
+.captured-palm-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.empty-preview {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    color: #64748b;
+}
+
+.empty-preview svg {
+    color: #64748b;
+}
+
+.empty-preview span {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CAPTURE / UPLOAD BUTTONS
+========================================================= */
+
+.capture-btn,
+.upload-btn {
+    width: 100%;
+
+    min-height: 44px;
+
+    margin-top: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+.capture-btn:hover,
+.upload-btn:hover {
+    transform: translateY(-1px);
+
+    filter: brightness(1.07);
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.20);
+}
+
+.capture-btn:active,
+.upload-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   AI ANALYSIS
+========================================================= */
+
+.ai-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.ai-panel .analysis-item {
+    min-height: 68px;
+
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+
+    border-radius: 11px;
+
+    background: #1b2a40;
+
+    border: 1px solid rgba(148, 163, 184, 0.06);
+}
+
+.ai-panel .analysis-item:last-child {
+    margin-bottom: 0;
+}
+
+.analysis-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #315bea,
+            #4f46e5
+        );
+
+    color: white;
+}
+
+.analysis-item small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #8798ad;
+
+    font-size: 10px;
+}
+
+.analysis-item strong {
+    display: block;
+
+    color: #f8fafc;
+
+    font-size: 13px;
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.enrollment-message {
+    margin-top: 16px;
+
+    padding: 14px 16px;
+
+    border-radius: 11px;
+
+    background: rgba(34, 197, 94, 0.08);
+
+    border: 1px solid rgba(34, 197, 94, 0.18);
+
+    color: #86efac;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MAIN ENROLL BUTTON
+========================================================= */
+
+.identify-btn {
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 28px rgba(37, 99, 235, 0.16);
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.identify-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+
+    filter: brightness(1.06);
+
+    box-shadow:
+        0 14px 34px rgba(37, 99, 235, 0.23);
+}
+
+.identify-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.identify-btn:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1500px) {
+
+    .enrollment-page {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .enrollment-card {
+        padding: 24px;
+    }
+
+    .enrollment-grid {
+        gap: 20px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .enrollment-page {
+        padding: 35px 25px 50px;
+    }
+
+    .enrollment-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+    }
+
+    .ai-panel {
+        grid-column: 1 / -1;
+    }
+
+    .ai-panel {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .ai-panel .ai-heading {
+        grid-column: 1 / -1;
+    }
+
+    .ai-panel .analysis-item {
+        margin-bottom: 0;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .enrollment-page {
+        padding: 28px 18px 40px;
+    }
+
+    .enrollment-card {
+        padding: 16px;
+    }
+
+    .employee-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .enrollment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-panel {
+        grid-column: auto;
+
+        display: flex;
+    }
+
+    .ai-panel .analysis-item {
+        margin-bottom: 12px;
+    }
+
+    .ai-panel .analysis-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .camera-preview,
+    .palm-preview {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .enrollment-page {
+        padding: 22px 12px 35px;
+    }
+
+    .enrollment-header {
+        margin-bottom: 20px;
+    }
+
+    .enrollment-header h1 {
+        font-size: 34px;
+    }
+
+    .enrollment-header p {
+        font-size: 13px;
+    }
+
+    .enrollment-card {
+        padding: 13px;
+
+        border-radius: 16px;
+    }
+
+    .employee-details-section {
+        padding: 14px;
+    }
+
+    .enrollment-panel {
+        padding: 14px;
+    }
+
+    .section-heading {
+        gap: 10px;
+    }
+
+    .section-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .panel-heading h2 {
+        font-size: 17px;
+    }
+
+    .camera-preview,
+    .palm-preview {
+        aspect-ratio: 4 / 3;
+    }
+
+    .identify-btn {
+        height: 48px;
+    }
+}

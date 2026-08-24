@@ -1,0 +1,1023 @@
+/* =========================================================
+   PALMSECUREAI — SYSTEM OVERVIEW
+   Premium Enterprise Dashboard
+   ========================================================= */
+
+.system-overview {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 26px;
+
+    border: 1px solid rgba(148, 163, 184, 0.10);
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at 88% 0%,
+            rgba(34, 197, 94, 0.045),
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #0d1828 0%,
+            #0a1422 100%
+        );
+
+    box-shadow:
+        0 20px 55px rgba(2, 8, 23, 0.18);
+
+    overflow: hidden;
+}
+
+.system-overview::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 7%;
+
+    width: 86%;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(79, 124, 255, 0.35),
+        transparent
+    );
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.system-overview-header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+}
+
+.system-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    min-width: 0;
+}
+
+.system-heading-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(79, 124, 255, 0.16);
+    border-radius: 11px;
+
+    background: rgba(79, 124, 255, 0.09);
+
+    color: #7f9aff;
+}
+
+.system-heading > div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.system-heading span {
+    color: #6f8095;
+
+    font-size: 10px;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.system-heading h2 {
+    margin: 0;
+
+    color: #edf4fc;
+
+    font-size: 19px;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: -0.35px;
+}
+
+/* =========================================================
+   LIVE BADGE
+   ========================================================= */
+
+.system-live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    padding: 8px 12px;
+
+    border: 1px solid rgba(34, 197, 94, 0.13);
+    border-radius: 9px;
+
+    background: rgba(34, 197, 94, 0.055);
+
+    color: #75d797;
+
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.system-live-badge span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 0 4px rgba(34, 197, 94, 0.07),
+        0 0 10px rgba(34, 197, 94, 0.55);
+}
+
+/* =========================================================
+   SERVICES GRID
+   ========================================================= */
+
+.system-services {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+
+    width: 100%;
+}
+
+/* =========================================================
+   SERVICE CARD
+   ========================================================= */
+
+.system-service-card {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 19px;
+
+    border: 1px solid rgba(148, 163, 184, 0.075);
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 30, 47, 0.78),
+            rgba(11, 23, 37, 0.72)
+        );
+
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        background 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.system-service-card:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(79, 124, 255, 0.18);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(19, 35, 55, 0.90),
+            rgba(12, 26, 42, 0.84)
+        );
+
+    box-shadow:
+        0 12px 30px rgba(2, 8, 23, 0.16);
+}
+
+/* =========================================================
+   SERVICE TOP
+   ========================================================= */
+
+.service-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.service-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+}
+
+.service-icon.blue {
+    color: #82a0ff;
+    background: rgba(79, 124, 255, 0.10);
+}
+
+.service-icon.purple {
+    color: #b39aff;
+    background: rgba(139, 92, 246, 0.10);
+}
+
+.service-icon.green {
+    color: #55dc86;
+    background: rgba(34, 197, 94, 0.09);
+}
+
+/* =========================================================
+   SERVICE STATUS
+   ========================================================= */
+
+.service-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #71bd8a;
+
+    font-size: 9px;
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+.service-status span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 7px rgba(34, 197, 94, 0.45);
+}
+
+/* =========================================================
+   SERVICE CONTENT
+   ========================================================= */
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 17px;
+}
+
+.service-label {
+    color: #74849a;
+
+    font-size: 11px;
+    line-height: 1.3;
+
+    font-weight: 500;
+}
+
+.service-content strong {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #f0f5fb;
+
+    font-size: 27px;
+    line-height: 1.1;
+
+    font-weight: 750;
+
+    letter-spacing: -0.7px;
+}
+
+/* =========================================================
+   SERVICE FOOTER
+   ========================================================= */
+
+.service-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 17px;
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(148, 163, 184, 0.065);
+
+    color: #56677d;
+
+    font-size: 9px;
+}
+
+.service-footer span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    min-width: 0;
+}
+
+.service-footer span svg {
+    flex-shrink: 0;
+
+    color: #42c874;
+}
+
+.service-footer > svg {
+    flex-shrink: 0;
+
+    color: #405168;
+}
+
+/* =========================================================
+   BOTTOM INFORMATION BAR
+   ========================================================= */
+
+.system-overview-footer {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 14px;
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(148, 163, 184, 0.06);
+    border-radius: 12px;
+
+    background:
+        rgba(6, 16, 28, 0.58);
+}
+
+.system-footer-item {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+.footer-icon {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    color: #8da4ff;
+    background: rgba(79, 124, 255, 0.08);
+}
+
+.footer-icon.green {
+    color: #55dc86;
+    background: rgba(34, 197, 94, 0.075);
+}
+
+.footer-icon.blue {
+    color: #60a5fa;
+    background: rgba(59, 130, 246, 0.08);
+}
+
+.system-footer-item > div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+}
+
+.system-footer-item span {
+    color: #5b6d82;
+
+    font-size: 9px;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.system-footer-item strong {
+    overflow: hidden;
+
+    color: #9aa9bb;
+
+    font-size: 10px;
+    line-height: 1.3;
+
+    font-weight: 550;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.system-footer-divider {
+    width: 1px;
+    height: 30px;
+
+    margin: 0 20px;
+
+    flex-shrink: 0;
+
+    background: rgba(148, 163, 184, 0.09);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .system-services {
+        grid-template-columns: 1fr;
+    }
+
+    .system-service-card {
+        padding: 17px;
+    }
+}
+
+@media (max-width: 900px) {
+    .system-overview {
+        padding: 21px;
+    }
+
+    .system-overview-footer {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .system-footer-divider {
+        width: 100%;
+        height: 1px;
+
+        margin: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .system-overview {
+        padding: 17px;
+
+        border-radius: 16px;
+    }
+
+    .system-overview-header {
+        align-items: flex-start;
+    }
+
+    .system-heading h2 {
+        font-size: 17px;
+    }
+
+    .system-heading span {
+        font-size: 9px;
+    }
+
+    .system-live-badge {
+        padding: 7px 9px;
+
+        font-size: 9px;
+    }
+
+    .system-service-card {
+        padding: 16px;
+    }
+
+    .service-content strong {
+        font-size: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .system-service-card {
+        transition: none;
+    }
+
+    .system-service-card:hover {
+        transform: none;
+    }
+}
+
+/* ============================================================
+   PALMSECURE AI — PREMIUM TYPOGRAPHY OVERRIDE
+   Improves readability without changing JSX/functionality
+   ============================================================ */
+
+.system-overview,
+.system-overview * {
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+/* ------------------------------------------------------------
+   SECTION HEADINGS
+   ------------------------------------------------------------ */
+
+.system-overview h1 {
+    font-size: 34px !important;
+    line-height: 1.15 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.8px;
+}
+
+.system-overview h2 {
+    font-size: 25px !important;
+    line-height: 1.2 !important;
+    font-weight: 750 !important;
+    letter-spacing: -0.35px;
+}
+
+.system-overview h3 {
+    font-size: 19px !important;
+    line-height: 1.3 !important;
+    font-weight: 700 !important;
+}
+
+.system-overview p {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+}
+
+/* ------------------------------------------------------------
+   SMALL LABELS / EYEBROWS
+   ------------------------------------------------------------ */
+
+.system-overview .section-kicker,
+.system-overview .page-eyebrow,
+.system-overview .eyebrow,
+.system-overview .section-label,
+.system-overview .card-label {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.2px !important;
+}
+
+/* ------------------------------------------------------------
+   GENERAL CARD TYPOGRAPHY
+   ------------------------------------------------------------ */
+
+.system-overview .card,
+.system-overview .panel,
+.system-overview .overview-card,
+.system-overview .metric-card,
+.system-overview .info-card {
+    font-size: 15px;
+}
+
+.system-overview .card span,
+.system-overview .panel span {
+    font-size: 14px;
+}
+
+/* ------------------------------------------------------------
+   HERO
+   ------------------------------------------------------------ */
+
+.system-overview .hero-title,
+.system-overview .welcome-title {
+    font-size: 38px !important;
+    line-height: 1.15 !important;
+    font-weight: 800 !important;
+}
+
+.system-overview .hero-subtitle,
+.system-overview .welcome-subtitle {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}
+
+.system-overview .hero-meta,
+.system-overview .hero-date,
+.system-overview .hero-status {
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+}
+
+/* ------------------------------------------------------------
+   KPI / STAT CARDS
+   ------------------------------------------------------------ */
+
+.system-overview .stat-label,
+.system-overview .metric-label,
+.system-overview .summary-label {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+}
+
+.system-overview .stat-value,
+.system-overview .metric-value,
+.system-overview .summary-value {
+    font-size: 30px !important;
+    line-height: 1.1 !important;
+    font-weight: 800 !important;
+}
+
+.system-overview .stat-description,
+.system-overview .metric-description,
+.system-overview .summary-description {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+}
+
+/* ------------------------------------------------------------
+   SYSTEM OVERVIEW
+   ------------------------------------------------------------ */
+
+.system-overview .system-overview-title {
+    font-size: 25px !important;
+    font-weight: 750 !important;
+}
+
+.system-overview .system-overview-subtitle {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+.system-overview .system-card-title {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+.system-overview .system-card-value {
+    font-size: 25px !important;
+    font-weight: 800 !important;
+}
+
+.system-overview .system-card-description {
+    font-size: 13px !important;
+}
+
+/* ------------------------------------------------------------
+   EMPLOYEE PROFILE
+   ------------------------------------------------------------ */
+
+.system-overview .employee-name {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    font-weight: 750 !important;
+}
+
+.system-overview .employee-role,
+.system-overview .employee-subtitle {
+    font-size: 13px !important;
+}
+
+.system-overview .employee-info,
+.system-overview .employee-details {
+    font-size: 15px !important;
+}
+
+.system-overview .employee-info strong,
+.system-overview .employee-details strong {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+}
+
+/* ------------------------------------------------------------
+   AI AUTHENTICATION
+   ------------------------------------------------------------ */
+
+.system-overview .authentication-title,
+.system-overview .ai-title {
+    font-size: 25px !important;
+    font-weight: 750 !important;
+}
+
+.system-overview .authentication-subtitle,
+.system-overview .ai-subtitle {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+.system-overview .authentication-status,
+.system-overview .ai-status {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+}
+
+.system-overview .verification-title {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+.system-overview .verification-text {
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+}
+
+.system-overview .verification-value {
+    font-size: 16px !important;
+    font-weight: 750 !important;
+}
+
+/* ------------------------------------------------------------
+   ATTENDANCE ANALYTICS
+   ------------------------------------------------------------ */
+
+.system-overview .attendance-chart,
+.system-overview .attendance-analytics,
+.system-overview .attendance-card {
+    font-size: 15px;
+}
+
+.system-overview .attendance-chart h2,
+.system-overview .attendance-analytics h2 {
+    font-size: 25px !important;
+    line-height: 1.2 !important;
+    font-weight: 800 !important;
+}
+
+.system-overview .attendance-chart h3,
+.system-overview .attendance-analytics h3 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+
+.system-overview .attendance-chart p,
+.system-overview .attendance-analytics p {
+    font-size: 14px !important;
+}
+
+/* Analytics summary values */
+.system-overview .attendance-summary,
+.system-overview .chart-summary {
+    font-size: 14px !important;
+}
+
+.system-overview .attendance-summary strong,
+.system-overview .chart-summary strong {
+    font-size: 19px !important;
+    font-weight: 800 !important;
+}
+
+.system-overview .attendance-summary span,
+.system-overview .chart-summary span {
+    font-size: 13px !important;
+}
+
+/* Chart labels */
+.system-overview .recharts-cartesian-axis-tick-value {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+.system-overview .recharts-text {
+    font-size: 14px !important;
+}
+
+.system-overview .recharts-legend-item-text {
+    font-size: 13px !important;
+}
+
+.system-overview .recharts-tooltip-wrapper {
+    font-size: 14px !important;
+}
+
+/* ------------------------------------------------------------
+   RECENT ACTIVITY
+   ------------------------------------------------------------ */
+
+.system-overview .activity-title {
+    font-size: 25px !important;
+    font-weight: 750 !important;
+}
+
+.system-overview .activity-subtitle {
+    font-size: 14px !important;
+}
+
+.system-overview .activity-type {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.7px;
+}
+
+.system-overview .activity-name {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+.system-overview .activity-time {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+/* ------------------------------------------------------------
+   ATTENDANCE HISTORY
+   ------------------------------------------------------------ */
+
+.system-overview .attendance-history h2 {
+    font-size: 25px !important;
+    font-weight: 800 !important;
+}
+
+.system-overview .attendance-history p {
+    font-size: 14px !important;
+}
+
+.system-overview .attendance-history table {
+    font-size: 14px !important;
+}
+
+.system-overview .attendance-history th {
+    font-size: 12px !important;
+    font-weight: 750 !important;
+    letter-spacing: 0.8px !important;
+}
+
+.system-overview .attendance-history td {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.system-overview .attendance-history .employee-name {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+}
+
+.system-overview .status-badge {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+}
+
+/* ------------------------------------------------------------
+   QUICK ACTIONS
+   ------------------------------------------------------------ */
+
+.system-overview .quick-actions h2 {
+    font-size: 25px !important;
+    font-weight: 800 !important;
+}
+
+.system-overview .quick-actions p {
+    font-size: 14px !important;
+}
+
+.system-overview .quick-action-title {
+    font-size: 16px !important;
+    font-weight: 750 !important;
+}
+
+.system-overview .quick-action-description {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+}
+
+/* ------------------------------------------------------------
+   STATUS BADGES
+   ------------------------------------------------------------ */
+
+.system-overview .status-badge,
+.system-overview .status-pill,
+.system-overview .live-badge,
+.system-overview .system-status {
+    font-size: 12px !important;
+    font-weight: 750 !important;
+    letter-spacing: 0.3px;
+}
+
+/* ------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------ */
+
+.system-overview .attendance-chart-footer,
+.system-overview .section-footer {
+    font-size: 13px !important;
+}
+
+.system-overview .attendance-status,
+.system-overview .attendance-trend {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+/* ------------------------------------------------------------
+   HEADER / NAVIGATION
+   ------------------------------------------------------------ */
+
+.system-overview .navbar,
+.system-overview .header,
+.system-overview .dashboard-header {
+    font-size: 14px;
+}
+
+.system-overview .navbar input,
+.system-overview .header input {
+    font-size: 14px !important;
+}
+
+.system-overview .navbar button,
+.system-overview .header button {
+    font-size: 13px !important;
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE
+   ------------------------------------------------------------ */
+
+@media (max-width: 1200px) {
+
+    .system-overview h1 {
+        font-size: 31px !important;
+    }
+
+    .system-overview .hero-title,
+    .system-overview .welcome-title {
+        font-size: 34px !important;
+    }
+
+    .system-overview h2 {
+        font-size: 23px !important;
+    }
+
+    .system-overview .stat-value,
+    .system-overview .metric-value {
+        font-size: 27px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .system-overview h1 {
+        font-size: 27px !important;
+    }
+
+    .system-overview h2 {
+        font-size: 21px !important;
+    }
+
+    .system-overview .hero-title,
+    .system-overview .welcome-title {
+        font-size: 29px !important;
+    }
+
+    .system-overview .stat-value,
+    .system-overview .metric-value {
+        font-size: 25px !important;
+    }
+
+    .system-overview p {
+        font-size: 14px !important;
+    }
+
+    .system-overview .recharts-cartesian-axis-tick-value {
+        font-size: 12px !important;
+    }
+}

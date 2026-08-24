@@ -1,0 +1,237 @@
+.scanner-card {
+    width: 420px;
+    height: 560px;
+    background: rgba(17, 24, 39, 0.75);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    border-radius: 28px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45),
+        0 0 40px rgba(139,92,246,.15);
+}
+
+.scanner-header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.scanner-header h3{
+    color:white;
+    font-size:18px;
+    font-weight:600;
+}
+
+.scanner-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#22c55e;
+    box-shadow:0 0 12px #22c55e;
+    animation:pulseDot 1.5s infinite;
+}
+
+.scanner-body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:28px;
+}
+
+.scanner-ring{
+    width:230px;
+    height:230px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+
+.scanner-ring-inner{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:linear-gradient(145deg,#1f2937,#111827);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:
+        inset 0 0 30px rgba(255,255,255,.03),
+        0 0 30px rgba(99,102,241,.25);
+    animation: pulseGlow 2.8s ease-in-out infinite;
+}
+
+.scanner-hand{
+    font-size:70px;
+    color:#60a5fa;
+    animation: handFloat 3s ease-in-out infinite;
+}
+
+.scanner-progress{
+    width:100%;
+    height:10px;
+    background:#1f2937;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:96%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #22d3ee,
+        #8b5cf6,
+        #22d3ee
+    );
+    background-size:200% 100%;
+    border-radius:20px;
+    animation: progressGlow 2s linear infinite;
+}
+
+.scanner-status{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#4ade80;
+    font-size:15px;
+    font-weight:500;
+}
+
+.scanner-metrics{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.metric{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 18px;
+    border-radius:16px;
+    background:rgba(255,255,255,.04);
+}
+
+.metric span{
+    color:#9ca3af;
+    font-size:14px;
+}
+
+.metric strong{
+    color:white;
+    font-size:15px;
+}
+
+@keyframes rotateRing{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes rotateRingReverse{
+    from{
+        transform:rotate(360deg);
+    }
+    to{
+        transform:rotate(0deg);
+    }
+}
+
+@keyframes pulseGlow{
+    0%{
+        transform:scale(1);
+        box-shadow:
+            inset 0 0 30px rgba(255,255,255,.03),
+            0 0 25px rgba(99,102,241,.25);
+    }
+
+    50%{
+        transform:scale(1.05);
+        box-shadow:
+            inset 0 0 40px rgba(255,255,255,.05),
+            0 0 50px rgba(99,102,241,.55);
+    }
+
+    100%{
+        transform:scale(1);
+        box-shadow:
+            inset 0 0 30px rgba(255,255,255,.03),
+            0 0 25px rgba(99,102,241,.25);
+    }
+}
+
+@keyframes handFloat{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes progressGlow{
+    from{
+        background-position:0%;
+    }
+
+    to{
+        background-position:200%;
+    }
+}
+
+@keyframes pulseDot{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.4);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+.scanner-ring-1,
+.scanner-ring-2{
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+}
+
+.scanner-ring-1{
+    border:2px solid rgba(99,102,241,.45);
+    animation:rotateRing 12s linear infinite;
+}
+
+.scanner-ring-2{
+    inset:15px;
+    border:1px solid rgba(34,211,238,.4);
+    animation:rotateRingReverse 8s linear infinite;
+}
+
+.scanner-palm{
+    width:90px;
+    height:90px;
+    color:#60a5fa;
+    filter:
+        drop-shadow(0 0 10px rgba(96,165,250,.45))
+        drop-shadow(0 0 25px rgba(96,165,250,.25));
+    animation:handFloat 3s ease-in-out infinite;
+}

@@ -1,0 +1,53 @@
+.info-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    border:1px solid #edf2f7;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 40px rgba(37,99,235,.15);
+
+}
+
+.info-card h3{
+
+    margin:0;
+
+    color:#6b7280;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.info-card p{
+
+    margin-top:16px;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.success-text{
+
+    color:#16a34a !important;
+
+}

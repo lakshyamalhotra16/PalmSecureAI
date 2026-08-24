@@ -1,0 +1,616 @@
+/* =========================================================
+   PREMIUM RECENT ACTIVITY
+   ========================================================= */
+
+.recent-activity {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b1422 0%,
+            #0d1828 55%,
+            #0a1523 100%
+        );
+
+    border: 1px solid rgba(148, 163, 184, 0.09);
+
+    box-shadow:
+        0 18px 45px rgba(2, 8, 23, 0.12);
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   TOP LIGHT
+   ========================================================= */
+
+.recent-activity::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 8%;
+
+    width: 84%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(79, 124, 255, 0.28),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.recent-activity::after {
+    content: "";
+
+    position: absolute;
+
+    right: -100px;
+    bottom: -130px;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(79, 124, 255, 0.055),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.activity-header {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid
+        rgba(148, 163, 184, 0.055);
+}
+
+
+.activity-header h2 {
+    margin: 0;
+
+    color: #e7edf5;
+
+    font-size: 16px;
+
+    line-height: 1.2;
+
+    font-weight: 650;
+
+    letter-spacing: -0.25px;
+}
+
+
+/* =========================================================
+   LIVE UPDATES BADGE
+   ========================================================= */
+
+.activity-header span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    color: #6c9a7a;
+
+    background:
+        rgba(34, 197, 94, 0.045);
+
+    border:
+        1px solid
+        rgba(34, 197, 94, 0.09);
+
+    font-size: 7px;
+
+    font-weight: 650;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+.activity-header span::before {
+
+    content: "";
+
+    width: 5px;
+    height: 5px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 8px
+        rgba(34, 197, 94, 0.65);
+
+    animation:
+        activity-pulse 2s ease-in-out infinite;
+}
+
+
+@keyframes activity-pulse {
+
+    0%,
+    100% {
+        opacity: 0.55;
+        transform: scale(0.85);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
+   ACTIVITY LIST
+   ========================================================= */
+
+.activity-list {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+/* =========================================================
+   ACTIVITY ITEM
+   ========================================================= */
+
+.activity-item {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    min-width: 0;
+
+    padding: 12px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(15, 27, 42, 0.62);
+
+    border:
+        1px solid
+        rgba(148, 163, 184, 0.055);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   LEFT ACCENT
+   ========================================================= */
+
+.activity-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 12px;
+    bottom: 12px;
+
+    width: 2px;
+
+    border-radius: 0 3px 3px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #4f7cff,
+            rgba(79, 124, 255, 0.12)
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.25s ease;
+}
+
+
+.activity-item:hover {
+
+    transform: translateX(3px);
+
+    background:
+        rgba(17, 31, 49, 0.88);
+
+    border-color:
+        rgba(79, 124, 255, 0.13);
+
+    box-shadow:
+        0 8px 22px
+        rgba(2, 8, 23, 0.14);
+}
+
+
+.activity-item:hover::before {
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.activity-icon {
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #8299ff;
+
+    background:
+        rgba(79, 124, 255, 0.075);
+
+    border:
+        1px solid
+        rgba(79, 124, 255, 0.10);
+}
+
+
+.activity-item:nth-child(2n)
+.activity-icon {
+
+    color: #a78bfa;
+
+    background:
+        rgba(139, 92, 246, 0.075);
+
+    border-color:
+        rgba(139, 92, 246, 0.10);
+}
+
+
+.activity-item:nth-child(3n)
+.activity-icon {
+
+    color: #4ade80;
+
+    background:
+        rgba(34, 197, 94, 0.065);
+
+    border-color:
+        rgba(34, 197, 94, 0.09);
+}
+
+
+/* =========================================================
+   INFORMATION
+   ========================================================= */
+
+.activity-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.activity-info h4 {
+
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #dce5ef;
+
+    font-size: 9px;
+
+    line-height: 1.35;
+
+    font-weight: 600;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.activity-info p {
+
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #526176;
+
+    font-size: 7px;
+
+    line-height: 1.4;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TIME
+   ========================================================= */
+
+.activity-time {
+
+    flex-shrink: 0;
+
+    color: #3f5064;
+
+    font-size: 7px;
+
+    font-weight: 550;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.activity-empty {
+
+    min-height: 130px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        rgba(15, 27, 42, 0.42);
+
+    border:
+        1px dashed
+        rgba(148, 163, 184, 0.09);
+}
+
+
+.activity-empty p {
+
+    margin: 0;
+
+    color: #526176;
+
+    font-size: 8px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.recent-activity:hover {
+
+    border-color:
+        rgba(79, 124, 255, 0.14);
+
+    box-shadow:
+        0 22px 50px
+        rgba(2, 8, 23, 0.15);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .recent-activity {
+
+        padding: 21px;
+
+        border-radius: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .recent-activity {
+
+        padding: 18px;
+
+        border-radius: 17px;
+    }
+
+
+    .activity-header {
+
+        align-items: flex-start;
+    }
+
+
+    .activity-header h2 {
+
+        font-size: 15px;
+    }
+
+
+    .activity-item {
+
+        padding: 11px;
+
+        gap: 10px;
+    }
+
+
+    .activity-icon {
+
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .activity-time {
+
+        font-size: 6px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .recent-activity {
+
+        padding: 16px;
+    }
+
+
+    .activity-header span {
+
+        padding: 6px 8px;
+
+        font-size: 0;
+    }
+
+
+    .activity-header span::before {
+
+        width: 6px;
+        height: 6px;
+    }
+
+
+    .activity-time {
+
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .recent-activity,
+    .activity-item {
+
+        transition: none;
+    }
+
+
+    .activity-header span::before {
+
+        animation: none;
+    }
+
+}

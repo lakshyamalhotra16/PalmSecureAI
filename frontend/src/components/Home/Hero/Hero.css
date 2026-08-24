@@ -1,0 +1,4217 @@
+/* =========================================================
+   PalmSecureAI
+   PREMIUM ENTERPRISE BIOMETRIC HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+    min-height: calc(100vh - 82px);
+    padding: 54px 40px 24px;
+    overflow: hidden;
+    isolation: isolate;
+    color: #eef6ff;
+
+    background:
+        radial-gradient(
+            circle at 52% 30%,
+            rgba(0, 126, 255, 0.11),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 88% 72%,
+            rgba(89, 57, 255, 0.17),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 6% 78%,
+            rgba(0, 184, 255, 0.07),
+            transparent 25%
+        ),
+        #020914;
+}
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+.hero-grid {
+    position: absolute;
+    inset: 0;
+    z-index: -5;
+    pointer-events: none;
+
+    opacity: 0.42;
+
+    background-image:
+        linear-gradient(
+            rgba(72, 122, 191, 0.055) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(72, 122, 191, 0.055) 1px,
+            transparent 1px
+        );
+
+    background-size: 72px 72px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black 0%,
+            black 65%,
+            transparent 100%
+        );
+}
+
+/* =========================================================
+   AMBIENT GLOWS
+   ========================================================= */
+
+.hero-glow {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -4;
+}
+
+.hero-glow-blue {
+    width: 520px;
+    height: 520px;
+    left: -250px;
+    top: 220px;
+    background: rgba(0, 92, 255, 0.13);
+}
+
+.hero-glow-purple {
+    width: 620px;
+    height: 620px;
+    right: -260px;
+    bottom: -280px;
+    background: rgba(94, 48, 255, 0.16);
+}
+
+.hero-glow-cyan {
+    width: 420px;
+    height: 420px;
+    left: 48%;
+    top: 20%;
+    background: rgba(0, 173, 255, 0.06);
+}
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 1450px);
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(420px, 0.92fr)
+        minmax(520px, 1.12fr)
+        minmax(315px, 0.68fr);
+
+    gap: 26px;
+
+    align-items: center;
+}
+
+/* =========================================================
+   LEFT HERO
+   ========================================================= */
+
+.hero-left {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 22px;
+
+    padding: 12px 0;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 15px;
+
+    border: 1px solid rgba(43, 145, 255, 0.38);
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 64, 127, 0.28),
+            rgba(8, 37, 70, 0.12)
+        );
+
+    color: #54adff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.45px;
+
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.05),
+        0 0 28px rgba(0, 122, 255, 0.08);
+}
+
+.hero-badge svg {
+    filter:
+        drop-shadow(0 0 7px rgba(60, 164, 255, 0.9));
+}
+
+.hero-left h1 {
+    margin: 0;
+
+    max-width: 620px;
+
+    font-size: clamp(52px, 4.25vw, 76px);
+    line-height: 0.97;
+
+    letter-spacing: -3.5px;
+
+    font-weight: 850;
+
+    color: #f7faff;
+
+    text-wrap: balance;
+}
+
+.hero-left h1 span {
+    display: block;
+
+    margin-top: 17px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #2697ff 0%,
+            #4778ff 45%,
+            #9853ff 100%
+        );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    max-width: 570px;
+
+    margin: 0;
+
+    color: #91a5be;
+
+    font-size: 15px;
+    line-height: 1.78;
+
+    letter-spacing: 0.02px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-top: 4px;
+}
+
+.primary-btn,
+.secondary-btn {
+    position: relative;
+
+    height: 52px;
+
+    padding: 0 23px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border-radius: 13px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.primary-btn {
+    min-width: 151px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(117, 155, 255, 0.7);
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #377eff 0%,
+            #564de9 100%
+        );
+
+    box-shadow:
+        0 14px 38px rgba(52, 92, 255, 0.3);
+}
+
+.primary-btn::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            110deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.2),
+            transparent 55%
+        );
+
+    transform: translateX(-120%);
+
+    transition: transform 0.55s ease;
+}
+
+.primary-btn:hover::before {
+    transform: translateX(120%);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.primary-btn:hover {
+    box-shadow:
+        0 19px 48px rgba(55, 92, 255, 0.42);
+}
+
+.secondary-btn {
+    min-width: 142px;
+
+    border: 1px solid rgba(108, 138, 178, 0.25);
+
+    color: #e5eef9;
+
+    background:
+        rgba(7, 22, 39, 0.76);
+
+    backdrop-filter: blur(14px);
+}
+
+.secondary-btn:hover {
+    border-color: rgba(70, 143, 255, 0.48);
+
+    background:
+        rgba(14, 35, 60, 0.92);
+}
+
+/* =========================================================
+   TRUST ROW
+   ========================================================= */
+
+.hero-trust-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 4px;
+
+    color: #617893;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.trust-item svg {
+    color: #28df81;
+}
+
+.trust-divider {
+    width: 1px;
+    height: 14px;
+
+    background: rgba(126, 155, 189, 0.15);
+}
+
+/* =========================================================
+   LIVE SCANNER CARD
+   ========================================================= */
+
+.hero-live-card {
+    position: relative;
+
+    height: 525px;
+
+    border: 1px solid rgba(54, 130, 210, 0.36);
+    border-radius: 23px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 47%,
+            rgba(0, 125, 255, 0.13),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(7, 27, 47, 0.96),
+            rgba(2, 13, 27, 0.98)
+        );
+
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.045),
+        inset 0 -1px rgba(0, 116, 255, 0.05),
+        0 30px 90px rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(20px);
+}
+
+.hero-live-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 560px;
+    height: 560px;
+
+    left: 50%;
+    top: 10px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 139, 255, 0.14),
+            transparent 67%
+        );
+
+    filter: blur(15px);
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   SCANNER HEADER
+   ========================================================= */
+
+.live-card-header {
+    position: absolute;
+
+    top: 20px;
+    left: 23px;
+    right: 23px;
+
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.live-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #45b8ff;
+
+    font-size: 13px;
+    font-weight: 850;
+
+    letter-spacing: 0.5px;
+}
+
+.live-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #20e77d;
+
+    box-shadow:
+        0 0 8px #20e77d,
+        0 0 18px rgba(32, 231, 125, 0.5);
+
+    animation: livePulse 1.6s ease-in-out infinite;
+}
+
+.scan-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    color: #48b1ff;
+}
+
+.scan-mode {
+    color: #54738e;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   SCAN FRAME
+   ========================================================= */
+
+.scan-frame {
+    position: absolute;
+
+    inset: 58px 20px 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scan-grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.18;
+
+    background-image:
+        linear-gradient(
+            rgba(52, 142, 221, 0.11) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(52, 142, 221, 0.11) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
+
+    mask-image:
+        radial-gradient(
+            circle at center,
+            black,
+            transparent 72%
+        );
+}
+
+/* =========================================================
+   CORNERS
+   ========================================================= */
+
+.corner {
+    position: absolute;
+
+    width: 38px;
+    height: 38px;
+
+    z-index: 15;
+
+    border-color: rgba(226, 245, 255, 0.85);
+    border-style: solid;
+
+    filter:
+        drop-shadow(0 0 5px rgba(100, 198, 255, 0.35));
+}
+
+.corner-tl {
+    top: 8px;
+    left: 8px;
+
+    border-width: 2px 0 0 2px;
+}
+
+.corner-tr {
+    top: 8px;
+    right: 8px;
+
+    border-width: 2px 2px 0 0;
+}
+
+.corner-bl {
+    bottom: 8px;
+    left: 8px;
+
+    border-width: 0 0 2px 2px;
+}
+
+.corner-br {
+    bottom: 8px;
+    right: 8px;
+
+    border-width: 0 2px 2px 0;
+}
+
+/* =========================================================
+   PARTICLES
+   ========================================================= */
+
+.scan-particles {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.scan-particles span {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #35b7ff;
+
+    box-shadow:
+        0 0 9px #27aaff,
+        0 0 18px rgba(39, 170, 255, 0.55);
+
+    animation:
+        particleFloat 3.8s ease-in-out infinite;
+}
+
+.particle-1 { left: 16%; top: 24%; animation-delay: -0.3s; }
+.particle-2 { left: 74%; top: 18%; animation-delay: -1.2s; }
+.particle-3 { left: 84%; top: 40%; animation-delay: -0.7s; }
+.particle-4 { left: 20%; top: 58%; animation-delay: -1.8s; }
+.particle-5 { left: 72%; top: 68%; animation-delay: -2.4s; }
+.particle-6 { left: 36%; top: 12%; animation-delay: -1.1s; }
+.particle-7 { left: 87%; top: 30%; animation-delay: -2.7s; }
+.particle-8 { left: 12%; top: 44%; animation-delay: -1.5s; }
+.particle-9 { left: 63%; top: 27%; animation-delay: -3s; }
+.particle-10 { left: 31%; top: 72%; animation-delay: -0.9s; }
+.particle-11 { left: 78%; top: 82%; animation-delay: -2s; }
+.particle-12 { left: 46%; top: 17%; animation-delay: -1.7s; }
+.particle-13 { left: 56%; top: 76%; animation-delay: -2.8s; }
+.particle-14 { left: 25%; top: 34%; animation-delay: -3.4s; }
+
+/* =========================================================
+   BIOMETRIC DATA LABELS
+   ========================================================= */
+
+.biometric-label {
+    position: absolute;
+
+    z-index: 18;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 8px 11px;
+
+    border-left: 1px solid rgba(46, 174, 255, 0.45);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 30, 54, 0.8),
+            transparent
+        );
+
+    backdrop-filter: blur(5px);
+}
+
+.biometric-label span {
+    color: #718ba7;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+.biometric-label strong {
+    color: #32b8ff;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    text-shadow:
+        0 0 10px rgba(42, 180, 255, 0.5);
+}
+
+.biometric-depth {
+    left: 26px;
+    top: 108px;
+}
+
+.biometric-pattern {
+    right: 24px;
+    top: 108px;
+
+    text-align: right;
+
+    border-left: none;
+    border-right: 1px solid rgba(46, 174, 255, 0.45);
+
+    background:
+        linear-gradient(
+            -90deg,
+            rgba(4, 30, 54, 0.8),
+            transparent
+        );
+}
+
+.biometric-pattern strong {
+    color: #21e8a0;
+}
+
+.biometric-lines {
+    left: 26px;
+    bottom: 116px;
+}
+
+.biometric-match {
+    right: 24px;
+    bottom: 116px;
+
+    text-align: right;
+
+    border-left: none;
+    border-right: 1px solid rgba(46, 174, 255, 0.45);
+
+    background:
+        linear-gradient(
+            -90deg,
+            rgba(4, 30, 54, 0.8),
+            transparent
+        );
+}
+
+.biometric-match strong {
+    color: #21e8a0;
+}
+
+/* =========================================================
+   DATA CONNECTORS
+   ========================================================= */
+
+.data-connector {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 72px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(44, 176, 255, 0),
+            rgba(44, 176, 255, 0.65)
+        );
+}
+
+.connector-left-top {
+    left: 100px;
+    top: 145px;
+}
+
+.connector-right-top {
+    right: 100px;
+    top: 145px;
+
+    transform: scaleX(-1);
+}
+
+.connector-left-bottom {
+    left: 100px;
+    bottom: 148px;
+}
+
+.connector-right-bottom {
+    right: 100px;
+    bottom: 148px;
+
+    transform: scaleX(-1);
+}
+
+/* =========================================================
+   HOLOGRAPHIC HAND
+   ========================================================= */
+
+.hand-scanner {
+    position: relative;
+
+    width: 330px;
+    height: 355px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    perspective: 1100px;
+
+    transform-style: preserve-3d;
+
+    animation:
+        handHover 4.5s ease-in-out infinite;
+}
+
+/* Aura */
+
+.hand-aura {
+    position: absolute;
+
+    width: 260px;
+    height: 290px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(0, 173, 255, 0.34),
+            rgba(0, 92, 255, 0.11) 44%,
+            transparent 72%
+        );
+
+    filter: blur(18px);
+
+    animation:
+        auraPulse 2.8s ease-in-out infinite;
+}
+
+/* 3D depth layers */
+
+.hand-depth {
+    position: absolute;
+
+    width: 160px;
+    height: 225px;
+
+    border: 1px solid rgba(41, 151, 255, 0.22);
+
+    border-radius:
+        50% 50% 43% 43% /
+        42% 42% 58% 58%;
+
+    transform:
+        rotateX(54deg)
+        rotateZ(-7deg);
+
+    pointer-events: none;
+}
+
+.hand-depth-back {
+    transform:
+        rotateX(54deg)
+        rotateZ(-7deg)
+        translateZ(-38px);
+
+    opacity: 0.25;
+}
+
+.hand-depth-front {
+    transform:
+        rotateX(54deg)
+        rotateZ(-7deg)
+        translateZ(-18px);
+
+    opacity: 0.5;
+}
+
+/* =========================================================
+   HAND IMAGE / CSS HOLOGRAM
+   ========================================================= */
+
+.hand-image-wrap {
+    position: relative;
+
+    width: 240px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform-style: preserve-3d;
+
+    z-index: 8;
+}
+
+.hand-image-glow {
+    position: absolute;
+
+    width: 190px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(24, 171, 255, 0.38),
+            transparent 70%
+        );
+
+    filter: blur(16px);
+}
+
+/*
+   CSS-built holographic hand.
+   This keeps the component independent of external image files.
+*/
+
+.hand-image {
+    position: relative;
+
+    width: 180px;
+    height: 235px;
+
+    transform:
+        rotateX(4deg)
+        rotateY(-3deg);
+
+    filter:
+        drop-shadow(0 0 6px rgba(72, 193, 255, 0.95))
+        drop-shadow(0 0 22px rgba(0, 133, 255, 0.7));
+
+    animation:
+        hologramFlicker 2.8s ease-in-out infinite;
+}
+
+/* Palm */
+
+.hand-outline {
+    position: absolute;
+
+    left: 42px;
+    bottom: 20px;
+
+    width: 95px;
+    height: 122px;
+
+    border: 3px solid #43c1ff;
+
+    border-radius:
+        44% 45% 48% 47% /
+        38% 39% 62% 61%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(29, 174, 255, 0.13),
+            rgba(0, 76, 255, 0.035)
+        );
+
+    box-shadow:
+        inset 0 0 25px rgba(35, 169, 255, 0.2),
+        0 0 10px rgba(56, 189, 255, 0.9);
+}
+
+/* Fingers */
+
+.hand-outline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    top: -85px;
+
+    width: 16px;
+    height: 95px;
+
+    border: 3px solid #43c1ff;
+
+    border-bottom: none;
+
+    border-radius:
+        13px 13px 0 0;
+
+    box-shadow:
+        31px -18px 0 -3px rgba(0, 0, 0, 0),
+        31px -18px 0 0 #43c1ff;
+}
+
+.hand-outline::after {
+    content: "";
+
+    position: absolute;
+
+    left: 37px;
+    top: -112px;
+
+    width: 16px;
+    height: 122px;
+
+    border: 3px solid #43c1ff;
+
+    border-bottom: none;
+
+    border-radius:
+        13px 13px 0 0;
+
+    box-shadow:
+        29px 13px 0 -1px #43c1ff,
+        56px 34px 0 -1px #43c1ff;
+}
+
+/* Palm lines */
+
+.palm-lines {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    border-radius: 45%;
+}
+
+.palm-lines span {
+    position: absolute;
+
+    height: 2px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #5fd0ff,
+            transparent
+        );
+
+    box-shadow:
+        0 0 6px rgba(66, 196, 255, 0.9);
+}
+
+.palm-lines span:nth-child(1) {
+    width: 64px;
+    left: 16px;
+    top: 32px;
+    transform: rotate(18deg);
+}
+
+.palm-lines span:nth-child(2) {
+    width: 74px;
+    left: 13px;
+    top: 54px;
+    transform: rotate(-9deg);
+}
+
+.palm-lines span:nth-child(3) {
+    width: 58px;
+    left: 20px;
+    top: 76px;
+    transform: rotate(14deg);
+}
+
+.palm-lines span:nth-child(4) {
+    width: 72px;
+    left: 15px;
+    top: 95px;
+    transform: rotate(-15deg);
+}
+
+.palm-lines span:nth-child(5) {
+    width: 48px;
+    left: 28px;
+    top: 111px;
+    transform: rotate(7deg);
+}
+
+/* Finger biometric lines */
+
+.finger-lines {
+    position: absolute;
+
+    left: -1px;
+    right: -1px;
+    top: -95px;
+
+    height: 115px;
+}
+
+.finger-lines i {
+    position: absolute;
+
+    width: 2px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #7bd9ff,
+            transparent
+        );
+
+    box-shadow:
+        0 0 6px rgba(82, 202, 255, 0.9);
+
+    opacity: 0.72;
+}
+
+.finger-lines i:nth-child(1) {
+    left: 12px;
+    top: 16px;
+    transform: rotate(3deg);
+}
+
+.finger-lines i:nth-child(2) {
+    left: 42px;
+    top: 2px;
+}
+
+.finger-lines i:nth-child(3) {
+    left: 72px;
+    top: -8px;
+}
+
+.finger-lines i:nth-child(4) {
+    left: 101px;
+    top: 6px;
+}
+
+.finger-lines i:nth-child(5) {
+    left: 128px;
+    top: 26px;
+    transform: rotate(-15deg);
+}
+
+/* =========================================================
+   SCAN BEAM
+   ========================================================= */
+
+.hand-scan-beam {
+    position: absolute;
+
+    left: 35px;
+    right: 35px;
+
+    top: 50px;
+
+    height: 3px;
+
+    z-index: 15;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #26aaff 18%,
+            #d9f7ff 50%,
+            #26aaff 82%,
+            transparent
+        );
+
+    box-shadow:
+        0 0 10px #29aeff,
+        0 0 30px rgba(30, 158, 255, 0.9);
+
+    animation:
+        scanBeam 2.7s ease-in-out infinite;
+}
+
+/* =========================================================
+   SCAN POINTS
+   ========================================================= */
+
+.scan-point {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    z-index: 18;
+
+    border-radius: 50%;
+
+    background: #d9f7ff;
+
+    box-shadow:
+        0 0 7px #3dbdff,
+        0 0 18px rgba(46, 175, 255, 0.8);
+
+    animation:
+        pointPulse 1.8s ease-in-out infinite;
+}
+
+.point-one {
+    left: 42%;
+    top: 35%;
+}
+
+.point-two {
+    left: 57%;
+    top: 43%;
+
+    animation-delay: 0.3s;
+}
+
+.point-three {
+    left: 48%;
+    top: 57%;
+
+    animation-delay: 0.6s;
+}
+
+.point-four {
+    left: 63%;
+    top: 64%;
+
+    animation-delay: 0.9s;
+}
+
+/* =========================================================
+   SCANNER RINGS
+   ========================================================= */
+
+.scanner-rings {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(41, 164, 255, 0.25);
+
+    pointer-events: none;
+}
+
+.ring-one {
+    width: 235px;
+    height: 235px;
+
+    animation:
+        ringRotate 8s linear infinite;
+}
+
+.ring-two {
+    width: 285px;
+    height: 285px;
+
+    border-style: dashed;
+    border-color: rgba(66, 121, 255, 0.14);
+
+    animation:
+        ringRotateReverse 12s linear infinite;
+}
+
+.ring-three {
+    width: 325px;
+    height: 325px;
+
+    border-color: rgba(31, 165, 255, 0.09);
+
+    animation:
+        ringPulse 3.5s ease-in-out infinite;
+}
+
+.ring-one::after,
+.ring-two::after {
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    top: -3px;
+    left: 50%;
+
+    border-radius: 50%;
+
+    background: #45bcff;
+
+    box-shadow:
+        0 0 12px #28a8ff;
+}
+
+/* =========================================================
+   PLATFORM
+   ========================================================= */
+
+.scan-platform {
+    position: absolute;
+
+    left: 50%;
+    bottom: 12px;
+
+    width: 310px;
+    height: 78px;
+
+    transform: translateX(-50%);
+}
+
+.platform-glow {
+    position: absolute;
+
+    left: 50%;
+    bottom: 13px;
+
+    width: 220px;
+    height: 50px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(20, 174, 255, 0.4),
+            transparent 70%
+        );
+
+    filter: blur(12px);
+}
+
+.platform-ring {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(23, 177, 255, 0.6);
+
+    box-shadow:
+        0 0 18px rgba(18, 146, 255, 0.22);
+}
+
+.ring-a {
+    width: 300px;
+    height: 45px;
+    bottom: 12px;
+}
+
+.ring-b {
+    width: 250px;
+    height: 34px;
+    bottom: 18px;
+
+    border-color: rgba(36, 133, 255, 0.38);
+}
+
+.ring-c {
+    width: 170px;
+    height: 23px;
+    bottom: 24px;
+
+    border-color: rgba(50, 194, 255, 0.7);
+}
+
+.platform-lines {
+    position: absolute;
+
+    left: 50%;
+    bottom: 30px;
+
+    width: 170px;
+    height: 16px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.platform-lines span {
+    width: 35px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #32b7ff,
+            transparent
+        );
+
+    box-shadow:
+        0 0 7px rgba(34, 174, 255, 0.7);
+}
+
+.platform-core {
+    position: absolute;
+
+    left: 50%;
+    bottom: 26px;
+
+    width: 78px;
+    height: 9px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #20b4ff;
+
+    box-shadow:
+        0 0 12px #20b4ff,
+        0 0 35px rgba(20, 166, 255, 0.8);
+
+    animation:
+        corePulse 1.8s ease-in-out infinite;
+}
+
+/* =========================================================
+   SCAN STATUS
+   ========================================================= */
+
+.scan-status-pill {
+    position: absolute;
+
+    bottom: 22px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 22;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 5px 10px;
+
+    border: 1px solid rgba(29, 180, 255, 0.18);
+    border-radius: 7px;
+
+    background: rgba(2, 19, 35, 0.82);
+
+    backdrop-filter: blur(8px);
+}
+
+.scan-status-pill > span {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #27e58a;
+
+    box-shadow:
+        0 0 8px #27e58a;
+}
+
+.scan-status-pill strong {
+    color: #53c6ff;
+
+    font-size: 8px;
+    letter-spacing: 0.5px;
+}
+
+.scan-status-pill small {
+    color: #607b96;
+
+    font-size: 7px;
+}
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.scan-progress {
+    position: absolute;
+
+    left: 21px;
+    right: 21px;
+    bottom: 17px;
+
+    z-index: 25;
+}
+
+.progress-track {
+    height: 4px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #0d2138;
+}
+
+.progress-track span {
+    display: block;
+
+    width: 68%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #158cff,
+            #54c5ff
+        );
+
+    box-shadow:
+        0 0 12px rgba(41, 161, 255, 0.75);
+
+    animation:
+        progressMove 3s ease-in-out infinite;
+}
+
+.progress-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 7px;
+}
+
+.progress-label strong {
+    color: #31b2ff;
+
+    font-size: 10px;
+}
+
+.progress-label small {
+    color: #637a94;
+
+    font-size: 8px;
+
+    letter-spacing: 0.7px;
+}
+
+/* =========================================================
+   RIGHT SECURITY CARD
+   ========================================================= */
+
+.scanner-card {
+    position: relative;
+
+    width: 100%;
+    min-height: 525px;
+
+    padding: 21px 19px;
+
+    border: 1px solid rgba(63, 132, 185, 0.28);
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 34%,
+            rgba(15, 213, 113, 0.07),
+            transparent 38%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(9, 29, 48, 0.96),
+            rgba(4, 16, 30, 0.98)
+        );
+
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.035),
+        0 30px 80px rgba(0, 0, 0, 0.34);
+
+    backdrop-filter: blur(20px);
+}
+
+.scanner-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    left: 50%;
+    top: 40px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(21, 228, 115, 0.1),
+            transparent 70%
+        );
+
+    filter: blur(10px);
+}
+
+.scanner-card-header {
+    position: relative;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.scanner-active {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #eaf3ff;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.scanner-active svg {
+    color: #22e47c;
+
+    filter:
+        drop-shadow(0 0 7px rgba(35, 229, 124, 0.6));
+}
+
+.live-pill {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    border: 1px solid rgba(30, 210, 117, 0.14);
+    border-radius: 9px;
+
+    color: #32eb83;
+
+    background: rgba(12, 92, 59, 0.25);
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.live-pill span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #25ed8a;
+
+    box-shadow:
+        0 0 9px #25ed8a;
+
+    animation:
+        livePulse 1.5s ease-in-out infinite;
+}
+
+/* =========================================================
+   SECURITY ORBITS
+   ========================================================= */
+
+.security-visual {
+    position: relative;
+
+    height: 225px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.security-orbit {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(31, 226, 122, 0.25);
+
+    animation:
+        securityOrbit 5s linear infinite;
+}
+
+.orbit-one {
+    width: 175px;
+    height: 175px;
+}
+
+.orbit-two {
+    width: 135px;
+    height: 135px;
+
+    border-color: rgba(31, 226, 122, 0.2);
+
+    animation-duration: 7s;
+    animation-direction: reverse;
+}
+
+.orbit-three {
+    width: 100px;
+    height: 100px;
+
+    border-color: rgba(31, 226, 122, 0.27);
+
+    animation-duration: 4s;
+}
+
+.orbit-dot {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #31ed89;
+
+    box-shadow:
+        0 0 10px #31ed89;
+}
+
+.dot-one {
+    top: 24px;
+    right: 66px;
+}
+
+.dot-two {
+    top: 82px;
+    left: 52px;
+}
+
+.dot-three {
+    bottom: 40px;
+    right: 55px;
+}
+
+.dot-four {
+    bottom: 61px;
+    left: 77px;
+}
+
+/* =========================================================
+   SECURITY HAND
+   ========================================================= */
+
+.security-core {
+    position: relative;
+
+    z-index: 5;
+
+    width: 92px;
+    height: 92px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(48, 237, 139, 0.5);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22, 111, 71, 0.96),
+            rgba(3, 46, 35, 0.76)
+        );
+
+    box-shadow:
+        0 0 30px rgba(24, 224, 120, 0.3),
+        inset 0 0 25px rgba(24, 224, 120, 0.14);
+
+    animation:
+        securityCorePulse 2.4s ease-in-out infinite;
+}
+
+.security-core-glow {
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(23, 231, 121, 0.14),
+            transparent 70%
+        );
+
+    filter: blur(5px);
+}
+
+.security-hand {
+    position: relative;
+
+    width: 50px;
+    height: 56px;
+
+    border: 2px solid #f1fff8;
+
+    border-radius:
+        45% 45% 48% 48%;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+/* Small hand fingers */
+
+.security-hand::before {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 27px;
+
+    left: 4px;
+    top: -20px;
+
+    border: 2px solid #f1fff8;
+
+    border-bottom: none;
+
+    border-radius: 8px 8px 0 0;
+
+    box-shadow:
+        11px -5px 0 -2px #f1fff8,
+        22px -7px 0 -2px #f1fff8,
+        33px -3px 0 -2px #f1fff8;
+}
+
+/* =========================================================
+   SYSTEM STATUS
+   ========================================================= */
+
+.system-status {
+    position: relative;
+
+    z-index: 8;
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid rgba(30, 219, 119, 0.14);
+    border-radius: 10px;
+
+    color: #2be37d;
+
+    background:
+        rgba(3, 93, 60, 0.18);
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.system-status svg {
+    filter:
+        drop-shadow(0 0 6px rgba(35, 230, 124, 0.5));
+}
+
+/* =========================================================
+   SECURITY ITEMS
+   ========================================================= */
+
+.scanner-items {
+    position: relative;
+
+    z-index: 8;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.scanner-item {
+    min-height: 59px;
+
+    display: grid;
+
+    grid-template-columns: 32px 1fr auto;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px 11px;
+
+    border: 1px solid rgba(104, 139, 177, 0.09);
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(24, 44, 71, 0.83),
+            rgba(15, 31, 51, 0.78)
+        );
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.scanner-item:hover {
+    transform: translateX(4px);
+
+    border-color:
+        rgba(59, 148, 255, 0.27);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(27, 50, 80, 0.9),
+            rgba(16, 34, 57, 0.86)
+        );
+}
+
+.scanner-item-icon {
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: rgba(20, 57, 100, 0.55);
+}
+
+.scanner-item-icon.blue {
+    color: #4faeff;
+}
+
+.scanner-item-icon.green {
+    color: #35e582;
+
+    background:
+        rgba(14, 87, 58, 0.34);
+}
+
+.scanner-item-main {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.scanner-item-main span {
+    color: #c7d4e4;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.scanner-item-main small {
+    color: #647c96;
+
+    font-size: 8px;
+}
+
+.scanner-item > strong {
+    color: #2be47c;
+
+    font-size: 10px;
+}
+
+/* =========================================================
+   SECURITY FOOTER
+   ========================================================= */
+
+.security-footer {
+    position: relative;
+
+    z-index: 8;
+
+    margin-top: 11px;
+    padding-top: 10px;
+
+    border-top:
+        1px solid rgba(100, 133, 165, 0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #5f7690;
+
+    font-size: 8px;
+}
+
+.security-footer div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.security-footer svg {
+    color: #3faaff;
+}
+
+.security-active {
+    color: #27e17a;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.hero-stats {
+    position: relative;
+
+    z-index: 3;
+
+    width: min(100%, 1450px);
+
+    margin: 24px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    border: 1px solid rgba(66, 124, 186, 0.28);
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    background:
+        rgba(4, 19, 35, 0.86);
+
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.025),
+        0 15px 40px rgba(0, 0, 0, 0.18);
+
+    backdrop-filter: blur(18px);
+}
+
+.hero-stat {
+    min-width: 0;
+
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 13px 17px;
+
+    border-right:
+        1px solid rgba(100, 132, 166, 0.12);
+
+    transition:
+        background 0.25s ease;
+}
+
+.hero-stat:hover {
+    background:
+        rgba(25, 52, 82, 0.28);
+}
+
+.hero-stat:last-child {
+    border-right: none;
+}
+
+.stat-icon {
+    flex: 0 0 36px;
+
+    width: 36px;
+    height: 36px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    border: 1px solid currentColor;
+
+    background:
+        rgba(18, 46, 78, 0.48);
+}
+
+.stat-icon.blue {
+    color: #3ca6ff;
+}
+
+.stat-icon.green {
+    color: #22e27e;
+
+    background:
+        rgba(10, 82, 57, 0.27);
+}
+
+.stat-icon.purple {
+    color: #a85cff;
+
+    background:
+        rgba(74, 34, 124, 0.27);
+}
+
+.stat-icon.yellow {
+    color: #ffc51c;
+
+    background:
+        rgba(92, 72, 8, 0.27);
+}
+
+.stat-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.hero-stat strong {
+    color: #f2f7ff;
+
+    font-size: 16px;
+    line-height: 1;
+}
+
+.hero-stat span {
+    overflow: hidden;
+
+    color: #71869e;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* =========================================================
+   FEATURE CARDS
+   ========================================================= */
+
+.hero-features {
+    position: relative;
+
+    z-index: 3;
+
+    width: min(100%, 1450px);
+
+    margin: 24px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 13px;
+}
+
+.feature-card {
+    position: relative;
+
+    min-width: 0;
+    min-height: 142px;
+
+    padding: 19px;
+
+    display: grid;
+
+    grid-template-columns:
+        43px 1fr 22px;
+
+    align-items: center;
+
+    gap: 13px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8, 28, 48, 0.96),
+            rgba(4, 18, 32, 0.94)
+        );
+
+    border: 1px solid;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.feature-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.05),
+            transparent 35%
+        );
+
+    transition:
+        opacity 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.27);
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-blue {
+    border-color:
+        rgba(26, 158, 255, 0.45);
+}
+
+.feature-green {
+    border-color:
+        rgba(22, 220, 117, 0.42);
+}
+
+.feature-purple {
+    border-color:
+        rgba(164, 76, 255, 0.42);
+}
+
+.feature-yellow {
+    border-color:
+        rgba(242, 191, 19, 0.42);
+}
+
+.feature-icon {
+    position: relative;
+
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 11px;
+
+    border: 1px solid currentColor;
+}
+
+.feature-blue .feature-icon {
+    color: #199eff;
+    background:
+        rgba(25, 158, 255, 0.1);
+}
+
+.feature-green .feature-icon {
+    color: #16dc75;
+    background:
+        rgba(22, 220, 117, 0.1);
+}
+
+.feature-purple .feature-icon {
+    color: #a44cff;
+    background:
+        rgba(164, 76, 255, 0.1);
+}
+
+.feature-yellow .feature-icon {
+    color: #f2bf13;
+    background:
+        rgba(242, 191, 19, 0.1);
+}
+
+.feature-content {
+    min-width: 0;
+
+    position: relative;
+}
+
+.feature-content h3 {
+    margin: 0 0 7px;
+
+    color: #edf4ff;
+
+    font-size: 14px;
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+.feature-content p {
+    margin: 0;
+
+    max-width: 290px;
+
+    color: #7890ab;
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.feature-arrow {
+    position: relative;
+
+    color: #e6eef8;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.feature-card:hover .feature-arrow {
+    transform: translateX(5px);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.hero-footer {
+    position: relative;
+
+    z-index: 3;
+
+    width: min(100%, 1450px);
+
+    margin: 18px auto 0;
+
+    padding-top: 13px;
+
+    border-top:
+        1px solid rgba(94, 126, 163, 0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #526983;
+
+    font-size: 9px;
+}
+
+.hero-footer > div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.footer-dot {
+    width: 5px;
+    height: 5px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #20df76;
+
+    box-shadow:
+        0 0 9px rgba(32, 223, 118, 0.85);
+}
+
+.footer-center-status {
+    color: #3e607e;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+.footer-center-status span {
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #299dff;
+
+    box-shadow:
+        0 0 8px #299dff;
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes livePulse {
+    0%,
+    100% {
+        opacity: 0.65;
+        transform: scale(0.85);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+@keyframes particleFloat {
+    0%,
+    100% {
+        opacity: 0.2;
+        transform:
+            translate3d(0, 6px, 0)
+            scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform:
+            translate3d(0, -12px, 0)
+            scale(1);
+    }
+}
+
+@keyframes handHover {
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotateX(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-8px)
+            rotateX(2deg);
+    }
+}
+
+@keyframes auraPulse {
+    0%,
+    100% {
+        opacity: 0.55;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
+
+@keyframes hologramFlicker {
+    0%,
+    100% {
+        opacity: 0.78;
+    }
+
+    45% {
+        opacity: 0.95;
+    }
+
+    50% {
+        opacity: 0.72;
+    }
+
+    55% {
+        opacity: 1;
+    }
+}
+
+@keyframes scanBeam {
+    0% {
+        top: 35px;
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    50% {
+        top: 275px;
+        opacity: 1;
+    }
+
+    88% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 35px;
+        opacity: 0;
+    }
+}
+
+@keyframes pointPulse {
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.35);
+    }
+}
+
+@keyframes ringRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ringRotateReverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes ringPulse {
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: scale(0.96);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: scale(1.04);
+    }
+}
+
+@keyframes corePulse {
+    0%,
+    100% {
+        opacity: 0.7;
+        transform:
+            translateX(-50%)
+            scale(0.86);
+    }
+
+    50% {
+        opacity: 1;
+        transform:
+            translateX(-50%)
+            scale(1.1);
+    }
+}
+
+@keyframes securityOrbit {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes securityCorePulse {
+    0%,
+    100% {
+        transform: scale(1);
+
+        box-shadow:
+            0 0 25px rgba(25, 219, 113, 0.23),
+            inset 0 0 22px rgba(24, 218, 113, 0.12);
+    }
+
+    50% {
+        transform: scale(1.045);
+
+        box-shadow:
+            0 0 38px rgba(25, 219, 113, 0.4),
+            inset 0 0 28px rgba(24, 218, 113, 0.2);
+    }
+}
+
+@keyframes progressMove {
+    0% {
+        width: 38%;
+    }
+
+    50% {
+        width: 78%;
+    }
+
+    100% {
+        width: 56%;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1380px) {
+    .hero {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .hero-container {
+        grid-template-columns:
+            minmax(370px, 0.9fr)
+            minmax(480px, 1.08fr)
+            minmax(300px, 0.65fr);
+
+        gap: 20px;
+    }
+
+    .hero-left h1 {
+        font-size: clamp(48px, 4.2vw, 69px);
+    }
+
+    .hero-live-card,
+    .scanner-card {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .hero-container {
+        grid-template-columns:
+            minmax(360px, 0.9fr)
+            minmax(470px, 1.1fr);
+    }
+
+    .scanner-card {
+        grid-column: 1 / -1;
+
+        min-height: 330px;
+    }
+
+    .security-visual {
+        height: 170px;
+    }
+
+    .scanner-items {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .system-status {
+        margin-bottom: 8px;
+    }
+
+    .hero-stats {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .hero-stat:nth-child(3) {
+        border-right: none;
+    }
+
+    .hero-features {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-left {
+        max-width: 760px;
+    }
+
+    .hero-live-card,
+    .scanner-card {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+    .scanner-card {
+        min-height: 400px;
+    }
+
+    .scanner-items {
+        display: flex;
+    }
+
+    .hero-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero-stat:nth-child(3) {
+        border-right:
+            1px solid rgba(100, 132, 166, 0.12);
+    }
+
+    .hero-stat:nth-child(even) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero {
+        min-height: auto;
+
+        padding:
+            36px
+            16px
+            22px;
+    }
+
+    .hero-left h1 {
+        font-size: 44px;
+        letter-spacing: -2.4px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.72;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        flex: 1;
+    }
+
+    .hero-trust-row {
+        flex-wrap: wrap;
+    }
+
+    .hero-live-card {
+        height: 470px;
+    }
+
+    .hand-scanner {
+        transform: scale(0.86);
+    }
+
+    .biometric-label {
+        display: none;
+    }
+
+    .data-connector {
+        display: none;
+    }
+
+    .hero-features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 9px;
+    }
+
+    .footer-center-status {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hero-left h1 {
+        font-size: 37px;
+        letter-spacing: -1.8px;
+    }
+
+    .hero-badge {
+        font-size: 9px;
+        padding: 8px 11px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .hero-live-card {
+        height: 420px;
+    }
+
+    .hand-scanner {
+        transform: scale(0.69);
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stat,
+    .hero-stat:nth-child(even),
+    .hero-stat:nth-child(3) {
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(100, 132, 166, 0.12);
+    }
+
+    .hero-stat:last-child {
+        border-bottom: none;
+    }
+
+    .scanner-items {
+        gap: 7px;
+    }
+
+    .scanner-item-main small {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero *,
+    .hero *::before,
+    .hero *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* =========================================================
+   FINAL PALMSECUREAI VISUAL POLISH
+   High-end holographic palm treatment
+   Appended intentionally so the existing 2847-line design
+   remains intact and all existing component classes continue
+   to work.
+   ========================================================= */
+
+/* ---------- Main holographic palm ---------- */
+
+.hero-live-card {
+    isolation: isolate;
+}
+
+.scan-frame {
+    perspective: 1400px;
+    transform-style: preserve-3d;
+}
+
+.hand-scanner {
+    position: relative;
+    width: 360px;
+    height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+    isolation: isolate;
+    animation:
+        handHoverPro 5.5s cubic-bezier(.42, 0, .2, 1) infinite;
+}
+
+.hand-scanner::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 320px;
+    border-radius: 48% 48% 45% 45%;
+    background:
+        radial-gradient(
+            ellipse at 50% 45%,
+            rgba(38, 181, 255, .26) 0%,
+            rgba(0, 111, 255, .13) 36%,
+            rgba(0, 56, 150, .06) 58%,
+            transparent 74%
+        );
+    filter: blur(18px);
+    transform:
+        translateZ(-55px)
+        rotateX(5deg);
+    opacity: .92;
+    animation: palmAuraPro 3.4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.hand-scanner::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    left: 50%;
+    bottom: 20px;
+    transform:
+        translateX(-50%)
+        rotateX(68deg)
+        translateZ(-35px);
+    border-radius: 50%;
+    border: 1px solid rgba(39, 181, 255, .34);
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(37, 184, 255, .17),
+            transparent 64%
+        );
+    box-shadow:
+        0 0 28px rgba(20, 155, 255, .22),
+        inset 0 0 28px rgba(30, 170, 255, .12);
+    animation: holographicFloorPro 3.2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Existing Lucide Hand becomes a premium biometric hologram. */
+.hand-icon {
+    position: relative;
+    z-index: 12;
+    width: 238px !important;
+    height: 238px !important;
+    flex: 0 0 auto;
+    color: #b9ecff !important;
+    stroke: #65cfff !important;
+    stroke-width: 1.35 !important;
+    fill: rgba(34, 155, 255, .055);
+    transform:
+        translateZ(36px)
+        rotateY(-3deg)
+        rotateX(2deg);
+    transform-origin: center;
+    filter:
+        drop-shadow(0 0 3px rgba(227, 249, 255, .98))
+        drop-shadow(0 0 9px rgba(63, 190, 255, .95))
+        drop-shadow(0 0 26px rgba(0, 124, 255, .72))
+        drop-shadow(0 0 55px rgba(0, 91, 255, .34));
+    animation:
+        holographicHandPro 3.8s ease-in-out infinite,
+        handGlitchPro 6s steps(1, end) infinite;
+}
+
+/* Adds depth behind the SVG without changing JSX. */
+.hand-icon::before,
+.hand-icon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* The scanner rings become a true 3D sensor field. */
+.scanner-rings {
+    transform-style: preserve-3d;
+    mix-blend-mode: screen;
+}
+
+.ring-one {
+    width: 255px;
+    height: 255px;
+    border-color: rgba(43, 184, 255, .38);
+    box-shadow:
+        0 0 18px rgba(22, 164, 255, .16),
+        inset 0 0 18px rgba(22, 164, 255, .08);
+}
+
+.ring-two {
+    width: 315px;
+    height: 315px;
+    border-color: rgba(74, 128, 255, .20);
+    border-style: dashed;
+}
+
+.ring-three {
+    width: 355px;
+    height: 355px;
+    border-color: rgba(31, 177, 255, .13);
+}
+
+/* ---------- Holographic biometric contour ---------- */
+
+.hand-glow {
+    position: absolute;
+    width: 235px;
+    height: 300px;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            ellipse at 50% 42%,
+            rgba(70, 208, 255, .36),
+            rgba(0, 128, 255, .16) 38%,
+            transparent 72%
+        );
+    filter: blur(14px);
+    transform: translateZ(2px);
+    animation: handGlowPro 2.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Scan beam across the palm. */
+.hand-scan-line,
+.hand-scan-beam {
+    z-index: 18;
+    height: 2px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(42, 171, 255, .35) 14%,
+            #e9fbff 50%,
+            rgba(42, 171, 255, .35) 86%,
+            transparent 100%
+        );
+    box-shadow:
+        0 0 7px #51c8ff,
+        0 0 22px rgba(42, 168, 255, .95),
+        0 0 42px rgba(0, 121, 255, .55);
+}
+
+/* ---------- Platform ---------- */
+
+.scan-platform {
+    transform-style: preserve-3d;
+    filter:
+        drop-shadow(0 0 16px rgba(21, 165, 255, .25));
+}
+
+.platform-ring {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(49, 193, 255, .18),
+            transparent
+        );
+}
+
+.platform-core {
+    width: 92px;
+    height: 11px;
+    box-shadow:
+        0 0 10px #25b7ff,
+        0 0 28px #1aa8ff,
+        0 0 58px rgba(20, 161, 255, .72);
+}
+
+/* ---------- Biometric telemetry ---------- */
+
+.biometric-label {
+    border-color: rgba(55, 190, 255, .58);
+    box-shadow:
+        0 0 18px rgba(20, 146, 255, .08);
+}
+
+.biometric-label strong {
+    text-shadow:
+        0 0 8px rgba(44, 184, 255, .8),
+        0 0 20px rgba(31, 143, 255, .45);
+}
+
+.scan-point {
+    width: 6px;
+    height: 6px;
+    box-shadow:
+        0 0 7px #e4faff,
+        0 0 16px #32b8ff,
+        0 0 30px rgba(39, 163, 255, .6);
+}
+
+/* ---------- Security card hand ---------- */
+
+.security-visual {
+    perspective: 900px;
+    transform-style: preserve-3d;
+}
+
+.security-core {
+    width: 104px;
+    height: 104px;
+    transform-style: preserve-3d;
+    box-shadow:
+        0 0 24px rgba(28, 233, 126, .24),
+        0 0 55px rgba(19, 207, 112, .14),
+        inset 0 0 28px rgba(24, 224, 120, .15);
+}
+
+.security-core svg {
+    width: 66px !important;
+    height: 66px !important;
+    color: #f2fff8 !important;
+    stroke: #f2fff8 !important;
+    stroke-width: 1.65 !important;
+    filter:
+        drop-shadow(0 0 5px #ffffff)
+        drop-shadow(0 0 14px rgba(45, 238, 143, .95))
+        drop-shadow(0 0 30px rgba(21, 217, 121, .55));
+    animation: securityHandPro 3s ease-in-out infinite;
+}
+
+/* ---------- Premium glass surfaces ---------- */
+
+.hero-live-card,
+.scanner-card,
+.hero-stats,
+.feature-card {
+    backdrop-filter: blur(22px) saturate(125%);
+    -webkit-backdrop-filter: blur(22px) saturate(125%);
+}
+
+.hero-live-card {
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.06),
+        inset 0 -1px rgba(0, 140, 255, .08),
+        0 28px 80px rgba(0,0,0,.38),
+        0 0 80px rgba(0,93,255,.055);
+}
+
+.scanner-card {
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.05),
+        inset 0 -1px rgba(21,226,120,.035),
+        0 28px 75px rgba(0,0,0,.34);
+}
+
+.feature-card {
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.035),
+        0 16px 42px rgba(0,0,0,.18);
+}
+
+/* ---------- More cinematic background depth ---------- */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            ellipse at 52% 44%,
+            rgba(0, 128, 255, .055),
+            transparent 31%
+        ),
+        radial-gradient(
+            ellipse at 83% 86%,
+            rgba(104, 53, 255, .10),
+            transparent 32%
+        );
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    opacity: .38;
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(47, 165, 255, .025) 50%,
+            transparent 100%
+        );
+}
+
+/* ---------- Final animation set ---------- */
+
+@keyframes handHoverPro {
+    0%, 100% {
+        transform:
+            translate3d(0, 0, 0)
+            rotateX(0deg)
+            rotateY(0deg);
+    }
+    50% {
+        transform:
+            translate3d(0, -9px, 0)
+            rotateX(2deg)
+            rotateY(-2deg);
+    }
+}
+
+@keyframes holographicHandPro {
+    0%, 100% {
+        opacity: .76;
+        transform:
+            translateZ(36px)
+            rotateY(-3deg)
+            rotateX(2deg)
+            scale(1);
+    }
+    45% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .88;
+        transform:
+            translateZ(43px)
+            rotateY(-1deg)
+            rotateX(3deg)
+            scale(1.018);
+    }
+}
+
+@keyframes handGlitchPro {
+    0%, 89%, 100% {
+        filter:
+            drop-shadow(0 0 3px rgba(227,249,255,.98))
+            drop-shadow(0 0 9px rgba(63,190,255,.95))
+            drop-shadow(0 0 26px rgba(0,124,255,.72))
+            drop-shadow(0 0 55px rgba(0,91,255,.34));
+    }
+    90% {
+        filter:
+            drop-shadow(3px 0 3px rgba(74,214,255,.75))
+            drop-shadow(-3px 0 9px rgba(68,103,255,.55))
+            drop-shadow(0 0 28px rgba(0,124,255,.72));
+    }
+    91% {
+        filter:
+            drop-shadow(0 0 3px rgba(227,249,255,.98))
+            drop-shadow(0 0 9px rgba(63,190,255,.95))
+            drop-shadow(0 0 26px rgba(0,124,255,.72));
+    }
+}
+
+@keyframes handGlowPro {
+    0%, 100% {
+        opacity: .55;
+        transform: translateZ(2px) scale(.92);
+    }
+    50% {
+        opacity: .98;
+        transform: translateZ(10px) scale(1.07);
+    }
+}
+
+@keyframes palmAuraPro {
+    0%, 100% {
+        opacity: .48;
+        transform:
+            translateZ(-55px)
+            rotateX(5deg)
+            scale(.92);
+    }
+    50% {
+        opacity: .9;
+        transform:
+            translateZ(-40px)
+            rotateX(5deg)
+            scale(1.08);
+    }
+}
+
+@keyframes holographicFloorPro {
+    0%, 100% {
+        opacity: .36;
+        transform:
+            translateX(-50%)
+            rotateX(68deg)
+            translateZ(-35px)
+            scale(.92);
+    }
+    50% {
+        opacity: .72;
+        transform:
+            translateX(-50%)
+            rotateX(68deg)
+            translateZ(-20px)
+            scale(1.06);
+    }
+}
+
+@keyframes securityHandPro {
+    0%, 100% {
+        transform:
+            translateY(0)
+            scale(1)
+            rotateZ(0deg);
+    }
+    50% {
+        transform:
+            translateY(-4px)
+            scale(1.045)
+            rotateZ(-1deg);
+    }
+}
+
+/* ---------- Responsive preservation ---------- */
+
+@media (max-width: 900px) {
+    .hand-scanner {
+        width: 330px;
+        height: 365px;
+    }
+
+    .hand-icon {
+        width: 215px !important;
+        height: 215px !important;
+    }
+
+    .ring-three {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 700px) {
+    .hand-scanner {
+        transform: scale(.86);
+    }
+
+    .hand-icon {
+        width: 205px !important;
+        height: 205px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hand-scanner {
+        transform: scale(.68);
+    }
+
+    .hand-icon {
+        width: 195px !important;
+        height: 195px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hand-scanner,
+    .hand-scanner::before,
+    .hand-scanner::after,
+    .hand-icon,
+    .hand-glow,
+    .security-core svg {
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   PALMSECUREAI — FINAL HOLOGRAPHIC PALM ENGINE
+   Replaces the flat Lucide hand with a layered biometric palm.
+   Existing layout/card styling remains untouched.
+   ========================================================= */
+
+.hero .hand-scanner {
+    position: relative;
+    width: 360px;
+    height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+    isolation: isolate;
+    z-index: 7;
+    animation: palmFloatFinal 5.8s cubic-bezier(.42,0,.2,1) infinite;
+}
+
+.hero .holo-hand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 250px;
+    height: 315px;
+    transform: translate(-50%, -50%) translateZ(40px);
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 8;
+}
+
+.hero .holo-hand-blue {
+    --hand-main: #1c9cff;
+    --hand-bright: #b9efff;
+    --hand-soft: rgba(24, 159, 255, .48);
+    --hand-shadow: rgba(0, 112, 255, .75);
+}
+
+.hero .holo-hand-green {
+    --hand-main: #17e889;
+    --hand-bright: #d7ffeb;
+    --hand-soft: rgba(20, 234, 137, .45);
+    --hand-shadow: rgba(0, 206, 111, .65);
+}
+
+.hero .holo-hand-aura {
+    position: absolute;
+    width: 230px;
+    height: 285px;
+    border-radius: 50%;
+    background:
+        radial-gradient(ellipse at center,
+            var(--hand-soft) 0%,
+            rgba(0, 110, 255, .18) 34%,
+            transparent 72%);
+    filter: blur(24px);
+    opacity: .9;
+    animation: palmAuraFinal 3.2s ease-in-out infinite;
+    transform: translateZ(-34px);
+}
+
+.hero .holo-hand-svg {
+    position: relative;
+    z-index: 12;
+    width: 248px !important;
+    height: 310px !important;
+    overflow: visible;
+    transform:
+        rotateX(2deg)
+        rotateY(-4deg)
+        translateZ(44px);
+    filter:
+        drop-shadow(0 0 5px var(--hand-bright))
+        drop-shadow(0 0 13px var(--hand-main))
+        drop-shadow(0 0 34px var(--hand-shadow));
+    animation: palmHologramFinal 3.6s ease-in-out infinite;
+}
+
+.hero .holo-hand-depth {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 142px;
+    height: 238px;
+    transform: translate(-50%, -50%) rotateX(57deg) rotateZ(-5deg);
+    border: 1px solid var(--hand-main);
+    border-radius: 48% 48% 42% 42% / 36% 36% 64% 64%;
+    opacity: .22;
+    box-shadow:
+        0 0 14px var(--hand-main),
+        inset 0 0 20px var(--hand-soft);
+    pointer-events: none;
+}
+
+.hero .holo-hand-depth-back {
+    transform: translate(-50%, -50%) rotateX(57deg) rotateZ(-5deg) translateZ(-52px) scale(.92);
+    opacity: .18;
+}
+
+.hero .holo-hand-depth-mid {
+    transform: translate(-50%, -50%) rotateX(57deg) rotateZ(-5deg) translateZ(-25px) scale(.97);
+    opacity: .24;
+}
+
+.hero .holo-hand-depth-front {
+    transform: translate(-50%, -50%) rotateX(57deg) rotateZ(-5deg) translateZ(0) scale(1.02);
+    opacity: .12;
+}
+
+.hero .holo-scan-beam {
+    position: absolute;
+    left: 18%;
+    right: 18%;
+    top: 47%;
+    height: 2px;
+    z-index: 18;
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(55, 194, 255, .2) 10%,
+            #e7fbff 48%,
+            #2cb9ff 52%,
+            rgba(55, 194, 255, .2) 90%,
+            transparent);
+    box-shadow:
+        0 0 8px #39c4ff,
+        0 0 24px rgba(39, 169, 255, .9),
+        0 0 60px rgba(39, 169, 255, .45);
+    animation: palmScanFinal 2.7s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.hero .holo-hand-green .holo-scan-beam,
+.security-core .holo-scan-beam {
+    background: linear-gradient(90deg, transparent, #eafff4, #2dff9a, transparent);
+    box-shadow: 0 0 9px #37ff9f, 0 0 28px rgba(31, 255, 143, .7);
+}
+
+/* Make the biometric labels sit naturally around the real palm. */
+.hero .biometric-label {
+    z-index: 30;
+    min-width: 78px;
+    padding: 8px 11px;
+    border-top: 1px solid rgba(49, 181, 255, .16);
+    border-bottom: 1px solid rgba(49, 181, 255, .08);
+    background: linear-gradient(90deg, rgba(3, 24, 45, .72), rgba(3, 24, 45, .08));
+    box-shadow: 0 8px 22px rgba(0,0,0,.16);
+    backdrop-filter: blur(7px);
+}
+
+.hero .biometric-depth { left: 18px; top: 108px; }
+.hero .biometric-pattern { right: 18px; top: 108px; }
+.hero .biometric-lines { left: 18px; bottom: 104px; }
+.hero .biometric-match { right: 18px; bottom: 104px; }
+
+.hero .biometric-label strong {
+    letter-spacing: .2px;
+    text-shadow:
+        0 0 8px rgba(55, 193, 255, .9),
+        0 0 20px rgba(34, 137, 255, .5);
+}
+
+/* Green security palm: compact, crisp and unmistakably hand-shaped. */
+.hero .security-core {
+    position: relative;
+    width: 112px;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    background:
+        radial-gradient(circle, rgba(18, 237, 135, .15), rgba(0, 55, 42, .04) 58%, transparent 72%);
+    border: 1px solid rgba(35, 239, 145, .18);
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 28px rgba(22, 232, 136, .13),
+        0 0 28px rgba(17, 231, 130, .25),
+        0 0 70px rgba(10, 204, 111, .12);
+    animation: securityPalmPulseFinal 3.2s ease-in-out infinite;
+}
+
+.hero .security-core .holo-hand {
+    width: 105px;
+    height: 116px;
+    transform: translate(-50%, -50%) translateZ(25px) scale(.54);
+}
+
+.hero .security-core .holo-hand-aura {
+    width: 120px;
+    height: 135px;
+    filter: blur(15px);
+    opacity: .7;
+}
+
+.hero .security-core .holo-hand-depth {
+    opacity: .13;
+}
+
+.hero .security-core .holo-hand-svg {
+    width: 188px !important;
+    height: 235px !important;
+    transform: rotateX(2deg) rotateY(-3deg) translateZ(32px);
+    filter:
+        drop-shadow(0 0 3px #effff7)
+        drop-shadow(0 0 10px #2aff99)
+        drop-shadow(0 0 26px rgba(17, 225, 126, .72));
+}
+
+.hero .security-core .holo-hand-green .holo-hand-svg {
+    animation: greenPalmPulseFinal 3.1s ease-in-out infinite;
+}
+
+.hero .scanner-card .security-visual {
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .scanner-card .security-ring {
+    border-color: rgba(31, 239, 143, .28);
+    box-shadow: 0 0 18px rgba(24, 225, 132, .1);
+}
+
+.hero .scanner-card .ring-outer { width: 172px; height: 172px; }
+.hero .scanner-card .ring-middle { width: 132px; height: 132px; }
+.hero .scanner-card .ring-inner { width: 96px; height: 96px; }
+
+@keyframes palmFloatFinal {
+    0%, 100% { transform: translate3d(0, 2px, 0) rotateX(0deg) rotateY(0deg); }
+    50% { transform: translate3d(0, -8px, 0) rotateX(1.2deg) rotateY(-1.8deg); }
+}
+
+@keyframes palmAuraFinal {
+    0%, 100% { opacity: .62; transform: translateZ(-34px) scale(.94); }
+    50% { opacity: 1; transform: translateZ(-34px) scale(1.06); }
+}
+
+@keyframes palmHologramFinal {
+    0%, 100% { opacity: .86; transform: rotateX(2deg) rotateY(-4deg) translateZ(44px) scale(1); }
+    48% { opacity: 1; }
+    50% { opacity: .94; transform: rotateX(2deg) rotateY(-2deg) translateZ(50px) scale(1.012); }
+}
+
+@keyframes palmScanFinal {
+    0% { top: 27%; opacity: 0; }
+    12% { opacity: 1; }
+    50% { top: 73%; opacity: 1; }
+    88% { opacity: 1; }
+    100% { top: 27%; opacity: 0; }
+}
+
+@keyframes securityPalmPulseFinal {
+    0%, 100% { transform: scale(.98); box-shadow: inset 0 0 28px rgba(22,232,136,.13), 0 0 28px rgba(17,231,130,.22), 0 0 70px rgba(10,204,111,.1); }
+    50% { transform: scale(1.035); box-shadow: inset 0 0 34px rgba(22,232,136,.2), 0 0 40px rgba(17,231,130,.34), 0 0 86px rgba(10,204,111,.16); }
+}
+
+@keyframes greenPalmPulseFinal {
+    0%, 100% { opacity: .84; transform: rotateX(2deg) rotateY(-3deg) translateZ(32px) scale(1); }
+    50% { opacity: 1; transform: rotateX(1deg) rotateY(0deg) translateZ(38px) scale(1.035); }
+}
+
+@media (max-width: 1380px) {
+    .hero .hand-scanner { width: 330px; height: 370px; }
+    .hero .holo-hand { transform: translate(-50%, -50%) translateZ(34px) scale(.93); }
+}
+
+@media (max-width: 900px) {
+    .hero .hand-scanner { width: 320px; height: 350px; }
+    .hero .holo-hand { transform: translate(-50%, -50%) translateZ(30px) scale(.9); }
+}
+
+@media (max-width: 700px) {
+    .hero .biometric-label { display: none; }
+    .hero .hand-scanner { width: 300px; height: 330px; }
+    .hero .holo-hand { transform: translate(-50%, -50%) translateZ(25px) scale(.82); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero .hand-scanner,
+    .hero .holo-hand-aura,
+    .hero .holo-hand-svg,
+    .hero .holo-scan-beam,
+    .hero .security-core,
+    .hero .security-core .holo-hand-svg {
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   PALMSECUREAI — FINAL BIOMETRIC HAND ASSET
+   Exact holographic palm treatment using the supplied
+   cinematic palm artwork. Existing layout remains untouched.
+   ========================================================= */
+
+.hero .holo-hand {
+    width: 300px;
+    height: 430px;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -51%);
+    transform-style: preserve-3d;
+    z-index: 20;
+    pointer-events: none;
+    animation: heroPalmFloatExact 5.8s ease-in-out infinite;
+}
+
+.hero .holo-hand-image {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+    mix-blend-mode: screen;
+    filter:
+        drop-shadow(0 0 4px rgba(112, 218, 255, .95))
+        drop-shadow(0 0 12px rgba(27, 156, 255, .92))
+        drop-shadow(0 0 30px rgba(0, 105, 255, .78))
+        drop-shadow(0 0 62px rgba(0, 80, 255, .38));
+    transform: translateZ(28px);
+    animation: heroPalmGlowExact 3.2s ease-in-out infinite;
+}
+
+.hero .holo-hand-aura,
+.hero .holo-hand-depth,
+.hero .holo-hand-svg {
+    display: none !important;
+}
+
+.hero .holo-hand-green .holo-hand-image {
+    filter:
+        hue-rotate(-66deg)
+        saturate(1.35)
+        brightness(1.05)
+        drop-shadow(0 0 4px rgba(206, 255, 232, .95))
+        drop-shadow(0 0 12px rgba(27, 255, 145, .92))
+        drop-shadow(0 0 30px rgba(0, 219, 116, .76))
+        drop-shadow(0 0 58px rgba(0, 190, 105, .36));
+}
+
+.hero .security-core .holo-hand {
+    width: 126px;
+    height: 150px;
+    transform: translate(-50%, -50%) scale(.72);
+}
+
+.hero .security-core .holo-hand-image {
+    width: 118px;
+    filter:
+        hue-rotate(-66deg)
+        saturate(1.45)
+        brightness(1.08)
+        drop-shadow(0 0 3px rgba(218, 255, 237, 1))
+        drop-shadow(0 0 9px rgba(28, 255, 148, .95))
+        drop-shadow(0 0 24px rgba(0, 214, 111, .78));
+}
+
+.hero .security-core .holo-hand-aura,
+.hero .security-core .holo-hand-depth,
+.hero .security-core .holo-hand-svg {
+    display: none !important;
+}
+
+@keyframes heroPalmFloatExact {
+    0%, 100% {
+        transform: translate(-50%, -51%) translateY(0) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -51%) translateY(-7px) scale(1.015);
+    }
+}
+
+@keyframes heroPalmGlowExact {
+    0%, 100% {
+        opacity: .92;
+        transform: translateZ(28px) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translateZ(38px) scale(1.018);
+    }
+}
+
+@media (max-width: 1100px) {
+    .hero .holo-hand {
+        width: 270px;
+        height: 390px;
+    }
+
+    .hero .holo-hand-image {
+        width: 225px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero .holo-hand {
+        width: 245px;
+        height: 350px;
+    }
+
+    .hero .holo-hand-image {
+        width: 205px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero .holo-hand {
+        width: 215px;
+        height: 315px;
+    }
+
+    .hero .holo-hand-image {
+        width: 180px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero .holo-hand,
+    .hero .holo-hand-image {
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   PALMSECUREAI — DEFINITIVE IMAGE HAND OVERRIDE
+   Uses the supplied cinematic palm asset for both scanners.
+   This block intentionally comes LAST so it wins over all
+   previous experimental hand/CSS/SVG rules in this file.
+   ========================================================= */
+
+.hero .hand-scanner {
+    position: relative !important;
+    width: 360px !important;
+    height: 390px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    isolation: isolate !important;
+    transform-style: preserve-3d !important;
+    z-index: 25 !important;
+}
+
+.hero .hand-scanner .holo-hand {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    width: 320px !important;
+    height: 390px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 50 !important;
+    pointer-events: none !important;
+}
+
+.hero .hand-scanner .holo-hand-image {
+    position: relative !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 300px !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
+    user-select: none !important;
+    -webkit-user-drag: none !important;
+    mix-blend-mode: screen !important;
+    transform: translateZ(30px) !important;
+    filter:
+        drop-shadow(0 0 4px rgba(220, 248, 255, 1))
+        drop-shadow(0 0 11px rgba(77, 196, 255, 1))
+        drop-shadow(0 0 27px rgba(0, 132, 255, .95))
+        drop-shadow(0 0 58px rgba(0, 82, 255, .58)) !important;
+    animation: palmAssetBreath 3.2s ease-in-out infinite !important;
+}
+
+/* The old CSS/SVG hand layers are disabled. */
+.hero .hand-scanner .holo-hand-aura,
+.hero .hand-scanner .holo-hand-depth,
+.hero .hand-scanner .holo-hand-svg,
+.hero .hand-scanner .hand-icon,
+.hero .hand-scanner .hand-outline,
+.hero .hand-scanner .hand-image,
+.hero .hand-scanner .hand-image-wrap {
+    display: none !important;
+}
+
+/* Keep the scanner beam behind the real palm. */
+.hero .hand-scanner .holo-scan-beam {
+    z-index: 45 !important;
+    pointer-events: none !important;
+}
+
+/* Green security palm — same asset, recolored professionally. */
+.hero .security-core {
+    position: relative !important;
+    width: 112px !important;
+    height: 112px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    isolation: isolate !important;
+    z-index: 20 !important;
+}
+
+.hero .security-core .holo-hand {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    width: 132px !important;
+    height: 145px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 30 !important;
+}
+
+.hero .security-core .holo-hand-image {
+    position: relative !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 120px !important;
+    height: auto !important;
+    max-width: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0 !important;
+    mix-blend-mode: screen !important;
+    filter:
+        hue-rotate(-66deg)
+        saturate(1.55)
+        brightness(1.1)
+        drop-shadow(0 0 3px rgba(225, 255, 239, 1))
+        drop-shadow(0 0 9px rgba(45, 255, 153, 1))
+        drop-shadow(0 0 23px rgba(0, 225, 117, .95))
+        drop-shadow(0 0 45px rgba(0, 190, 105, .55)) !important;
+    transform: translateZ(22px) !important;
+    animation: greenPalmAssetBreath 3.2s ease-in-out infinite !important;
+}
+
+.hero .security-core .holo-hand-aura,
+.hero .security-core .holo-hand-depth,
+.hero .security-core .holo-hand-svg,
+.hero .security-core .security-hand,
+.hero .security-core svg {
+    display: none !important;
+}
+
+@keyframes palmAssetBreath {
+    0%, 100% {
+        opacity: .93;
+        transform: translateZ(30px) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translateZ(38px) scale(1.025);
+    }
+}
+
+@keyframes greenPalmAssetBreath {
+    0%, 100% {
+        opacity: .9;
+        transform: translateZ(22px) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translateZ(30px) scale(1.045);
+    }
+}
+
+@media (max-width: 1380px) {
+    .hero .hand-scanner {
+        width: 330px !important;
+        height: 370px !important;
+    }
+
+    .hero .hand-scanner .holo-hand-image {
+        width: 280px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero .hand-scanner {
+        width: 320px !important;
+        height: 350px !important;
+    }
+
+    .hero .hand-scanner .holo-hand-image {
+        width: 255px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero .hand-scanner {
+        width: 280px !important;
+        height: 320px !important;
+    }
+
+    .hero .hand-scanner .holo-hand-image {
+        width: 220px !important;
+    }
+
+    .hero .security-core .holo-hand-image {
+        width: 102px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero .hand-scanner .holo-hand-image,
+    .hero .security-core .holo-hand-image {
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   PALM HAND - FINAL VISIBLE ASSET
+   ========================================================= */
+
+.hero .hand-scanner {
+    position: relative !important;
+    width: 360px !important;
+    height: 390px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+    isolation: isolate !important;
+    z-index: 20 !important;
+}
+
+.hero .hand-scanner .holo-hand {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    width: 330px !important;
+    height: 390px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 30 !important;
+    pointer-events: none !important;
+}
+
+.hero .hand-scanner .holo-hand-image {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    width: 300px !important;
+    height: auto !important;
+    max-width: none !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    mix-blend-mode: screen !important;
+
+    filter:
+        drop-shadow(0 0 5px rgba(220, 250, 255, 1))
+        drop-shadow(0 0 14px rgba(65, 190, 255, 1))
+        drop-shadow(0 0 32px rgba(0, 130, 255, .95))
+        drop-shadow(0 0 65px rgba(0, 75, 255, .55)) !important;
+
+    transform: translateZ(20px) !important;
+}
+
+/* GREEN HAND */
+
+.hero .security-core .holo-hand {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+
+    width: 130px !important;
+    height: 145px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    transform: translate(-50%, -50%) !important;
+    z-index: 30 !important;
+}
+
+.hero .security-core .holo-hand-image {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    width: 120px !important;
+    height: auto !important;
+    max-width: none !important;
+
+    object-fit: contain !important;
+
+    mix-blend-mode: screen !important;
+
+    filter:
+        hue-rotate(-65deg)
+        saturate(1.6)
+        brightness(1.08)
+        drop-shadow(0 0 4px rgba(220, 255, 235, 1))
+        drop-shadow(0 0 12px rgba(25, 255, 145, 1))
+        drop-shadow(0 0 28px rgba(0, 210, 110, .8)) !important;
+}
+
+/* NEVER HIDE THE ACTUAL IMAGE */
+
+.hero .holo-hand-aura,
+.hero .holo-hand-depth,
+.hero .holo-hand-svg {
+    display: none !important;
+}
+
+/* Keep scan beam behind hand */
+
+.hero .hand-scanner .holo-scan-beam {
+    z-index: 10 !important;
+    pointer-events: none !important;
+}
+
+@media (max-width: 1100px) {
+    .hero .hand-scanner .holo-hand-image {
+        width: 280px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero .hand-scanner .holo-hand-image {
+        width: 250px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero .hand-scanner .holo-hand-image {
+        width: 215px !important;
+    }
+}
+
+/* =========================================================
+   PALMSECUREAI — GUARANTEED VISIBLE PALM ASSET
+   Works even when Hero.jsx does not render an <img>.
+   Uses the public holographic palm asset directly.
+   ========================================================= */
+
+.hero .hand-scanner {
+    position: relative !important;
+
+    background-image:
+        url("/holographic-hand-clean.png") !important;
+
+    background-repeat: no-repeat !important;
+
+    background-position:
+        center 44% !important;
+
+    background-size:
+        300px auto !important;
+
+    background-blend-mode: screen !important;
+
+    overflow: visible !important;
+
+    isolation: isolate !important;
+
+    z-index: 25 !important;
+}
+
+/* Keep the actual hand visible above the scanner effects */
+.hero .hand-scanner > .hand-icon {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Keep scanner glow/effects */
+.hero .hand-scanner::before {
+    pointer-events: none !important;
+}
+
+.hero .hand-scanner::after {
+    pointer-events: none !important;
+}
+
+/* Make the image stronger and cleaner */
+.hero .hand-scanner {
+    filter:
+        drop-shadow(0 0 4px rgba(70, 190, 255, 0.55))
+        drop-shadow(0 0 18px rgba(0, 130, 255, 0.28));
+}
+
+/* Desktop */
+@media (min-width: 1381px) {
+    .hero .hand-scanner {
+        background-size: 315px auto !important;
+        background-position: center 43% !important;
+    }
+}
+
+/* Laptop */
+@media (max-width: 1380px) {
+    .hero .hand-scanner {
+        background-size: 285px auto !important;
+        background-position: center 43% !important;
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .hero .hand-scanner {
+        background-size: 255px auto !important;
+        background-position: center 43% !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero .hand-scanner {
+        background-size: 220px auto !important;
+        background-position: center 43% !important;
+    }
+}
