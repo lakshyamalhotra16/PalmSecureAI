@@ -16,10 +16,9 @@ h11==0.16.0
 idna==3.18
 kiwisolver==1.5.0
 matplotlib==3.11.1
-mediapipe==1.0.0
-numpy==2.4.6
-opencv-contrib-python==5.0.0.93
-opencv-python==5.0.0.93
+mediapipe==0.10.14
+numpy==1.26.4
+opencv-contrib-python==4.10.0.84
 packaging==26.2
 pillow==12.3.0
 pycparser==3.0
