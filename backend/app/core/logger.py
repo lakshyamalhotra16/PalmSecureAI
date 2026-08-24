@@ -1,35 +1,37 @@
 import logging
+import os
 from logging.handlers import RotatingFileHandler
 
-from app.core.config import settings
 
-def setup_logger() -> logging.Logger:
-
-    app_logger = logging.getLogger(settings.APP_NAME)
+def setup_logger():
+    app_logger = logging.getLogger("palmsecure")
+    app_logger.setLevel(logging.INFO)
 
     if app_logger.handlers:
         return app_logger
 
-    app_logger.setLevel(logging.INFO)
-
     formatter = logging.Formatter(
-        "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+        "%(asctime)s - %(levelname)s - %(message)s"
     )
 
-    file_handler = RotatingFileHandler(
-        filename=settings.LOG_DIR / "palmsecure.log",
-        maxBytes=5 * 1024 * 1024,
-        backupCount=5,
-        encoding="utf-8",
-    )
-
+    # Console logging - works on Render
     console_handler = logging.StreamHandler()
-
-    file_handler.setFormatter(formatter)
     console_handler.setFormatter(formatter)
-
-    app_logger.addHandler(file_handler)
     app_logger.addHandler(console_handler)
+
+    # File logging - only for local development
+    if os.getenv("RENDER") is None:
+        os.makedirs("backend/logs", exist_ok=True)
+
+        file_handler = RotatingFileHandler(
+            "backend/logs/palmsecure.log",
+            maxBytes=5 * 1024 * 1024,
+            backupCount=3,
+            encoding="utf-8"
+        )
+
+        file_handler.setFormatter(formatter)
+        app_logger.addHandler(file_handler)
 
     return app_logger
 
