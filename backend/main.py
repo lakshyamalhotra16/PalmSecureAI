@@ -45,6 +45,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "https://palm-secure-ai-psi.vercel.app",
+        "https://palmsecureai.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
