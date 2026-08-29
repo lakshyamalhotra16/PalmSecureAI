@@ -14,10 +14,27 @@ class AttendanceService:
         user_id: int,
         confidence: float,
     ):
+        """
+        Mark employee attendance after successful palm authentication.
+
+        First successful authentication of the day:
+            -> Check In
+
+        Second successful authentication of the day:
+            -> Check Out
+            -> Calculate working hours
+
+        Further authentications:
+            -> Return existing attendance record
+        """
 
         now = datetime.now()
         today = now.date()
         current_time = now.time()
+
+        # =========================================================
+        # CHECK WHETHER ATTENDANCE ALREADY EXISTS TODAY
+        # =========================================================
 
         attendance = crud.attendance_already_marked(
             db=db,
@@ -25,7 +42,10 @@ class AttendanceService:
             attendance_date=today,
         )
 
-        # First authentication of the day -> Check In
+        # =========================================================
+        # FIRST AUTHENTICATION -> CHECK IN
+        # =========================================================
+
         if attendance is None:
 
             attendance_data = AttendanceCreate(
@@ -34,16 +54,21 @@ class AttendanceService:
                 check_in=current_time,
                 check_out=None,
                 working_hours=0.0,
-                confidence=confidence,
+                confidence=float(confidence),
                 status="Present",
             )
 
-            return crud.create_attendance(
+            attendance = crud.create_attendance(
                 db=db,
                 attendance=attendance_data,
             )
 
-        # Second authentication of the day -> Check Out
+            return attendance
+
+        # =========================================================
+        # SECOND AUTHENTICATION -> CHECK OUT
+        # =========================================================
+
         if attendance.check_out is None:
 
             attendance.check_out = current_time
@@ -58,16 +83,37 @@ class AttendanceService:
                 current_time,
             )
 
+            # -----------------------------------------------------
+            # CALCULATE WORKING HOURS
+            # -----------------------------------------------------
+
             working_seconds = (
                 check_out_datetime - check_in_datetime
             ).total_seconds()
+
+            # Prevent negative working hours
+            if working_seconds < 0:
+                working_seconds = 0
 
             attendance.working_hours = round(
                 working_seconds / 3600,
                 2,
             )
 
+            # Keep latest confidence
+            attendance.confidence = float(confidence)
+
+            # Keep status as Present
+            attendance.status = "Present"
+
             db.commit()
             db.refresh(attendance)
+
+        # =========================================================
+        # THIRD/FURTHER AUTHENTICATION
+        # =========================================================
+
+        # If check-in and check-out already exist,
+        # don't create another attendance record.
 
         return attendance

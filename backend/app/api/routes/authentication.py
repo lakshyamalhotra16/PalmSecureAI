@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 
 from app.database.session import get_db
 from app.services.authentication_service import AuthenticationService
+from app.services.attendance_service import AttendanceService
 from app.utils.file_storage import save_image
 
 
@@ -57,12 +58,28 @@ def authenticate_user(
         )
 
         # ========================================================
-        # GET ATTENDANCE
+        # CHECK AUTHENTICATION RESULT
         # ========================================================
 
-        attendance = data.get(
-            "attendance",
+        if not data.get("authenticated"):
+            raise HTTPException(
+                status_code=401,
+                detail="Palm authentication failed.",
+            )
+
+        # ========================================================
+        # MARK ATTENDANCE
+        # ========================================================
+
+        attendance = AttendanceService.mark_attendance(
+            db=db,
+            user_id=data["user_id"],
+            confidence=data["confidence"],
         )
+
+        # ========================================================
+        # FORMAT ATTENDANCE RESPONSE
+        # ========================================================
 
         attendance_data = None
 
@@ -70,20 +87,27 @@ def authenticate_user(
 
             attendance_data = {
                 "id": attendance.id,
+
                 "date": str(
                     attendance.date
                 ),
+
                 "check_in": (
                     str(attendance.check_in)
                     if attendance.check_in
                     else None
                 ),
+
                 "check_out": (
                     str(attendance.check_out)
                     if attendance.check_out
                     else None
                 ),
+
                 "working_hours": attendance.working_hours,
+
+                "confidence": attendance.confidence,
+
                 "status": attendance.status,
             }
 
