@@ -361,7 +361,7 @@ export default function Enrollment() {
 
             const apiResponse =
                 await fetch(
-                    "http://127.0.0.1:8000/api/v1/enrollment/enroll",
+                    `${import.meta.env.VITE_API_BASE_URL}/enrollment/enroll`,
                     {
                         method: "POST",
                         body: formData,
